@@ -1,0 +1,40 @@
+footer {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-top: black solid 2px;
+}
+.footer-items {
+  height: 20px;
+  font-size: 15px;
+  align-content: center;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  footer {
+    height: 50px;
+    border-top: black solid 4px;
+  }
+
+  .footer-items {
+    height: 35px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  footer {
+    height: 80px;
+    border-top: black solid 4px;
+  }
+
+  .footer-items {
+    height: 55px;
+    font-size: 25px;
+  }
+}

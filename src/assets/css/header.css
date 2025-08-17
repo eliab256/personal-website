@@ -1,0 +1,150 @@
+header {
+  width: 100%;
+  height: 40px;
+  border-bottom: black solid 2px;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.header-container {
+  height: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+}
+
+.width-controller {
+  width: inherit;
+}
+
+.header-items {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  font-size: 13px;
+  max-width: 33, 3%;
+}
+
+.logo {
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+}
+
+.logo-items {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logo img {
+  height: 100%;
+  cursor: pointer;
+}
+
+.social-links {
+  justify-content: center;
+  height: 20px;
+  width: 33, 3%;
+  flex: 1;
+  gap: 1%;
+}
+
+.social-link-items {
+  width: 33, 3%;
+  height: 100%;
+}
+
+.social-link-items img {
+  height: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 2;
+  margin: 2%;
+}
+
+.menu button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.menu button::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0.15em;
+  background: linear-gradient(to right, rgb(38, 38, 205), rgb(19, 19, 19));
+  background-size: 100%;
+  bottom: 0.3em;
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+.menu button:hover {
+  color: rgb(10, 10, 131);
+  transition: 0.5s;
+}
+
+.menu button:hover::before {
+  width: 100%;
+}
+
+.menu button:focus::before {
+  width: 100%;
+  transition: 0s;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  header {
+    height: 50px;
+    border-bottom: black solid 4px;
+  }
+
+  .header-items {
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .social-links {
+    height: 20px;
+  }
+
+  .menu {
+    margin: 3%;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  header {
+    height: 80px;
+    border-bottom: black solid 4px;
+  }
+
+  .header-items {
+    height: 55px;
+    font-size: 25px;
+  }
+
+  .social-links {
+    height: 30px;
+  }
+
+  .menu {
+    margin: 10%;
+  }
+}
