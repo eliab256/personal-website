@@ -1,6 +1,5 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-
-export type PageState = "home" | "portfolio" | "contactMe" | "aboutMe";
+import type { PageState } from "../types/pageTypes";
 
 interface CurrentPageState {
   currentPage: PageState;
