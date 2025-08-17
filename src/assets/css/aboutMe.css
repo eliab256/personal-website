@@ -1,0 +1,236 @@
+.main-container {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-container-whoIam {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.main-items-whoIam {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: auto;
+  flex: 1;
+  margin-top: 10px;
+}
+
+.my-description {
+  flex: 0;
+}
+
+.my-photo {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.my-photo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: black 5px solid;
+}
+
+.main-container-mySkills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.main-items-mySkills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.main-items-mySkills a {
+  color: inherit;
+}
+
+.skills-scheme {
+  background-color: rgb(10, 10, 131, 0.15);
+  border-radius: 5%;
+}
+
+.skills-area {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 80%;
+}
+.skill {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  margin-bottom: 5px;
+}
+
+.skill-bar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  height: 20px;
+  z-index: 1;
+  border-radius: 100px;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.305);
+}
+
+.skill-fill {
+  background: linear-gradient(to right, rgb(12, 12, 118), rgb(19, 19, 19));
+  height: 20px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.305);
+}
+
+.skill-percent {
+  font-size: 15px;
+  color: white;
+}
+
+.self-motivation {
+  animation: self-motivation 2s;
+  width: 57%;
+}
+
+.organization {
+  animation: organization 2s;
+  width: 85%;
+}
+
+.self-discipline {
+  animation: self-discipline 2s;
+  width: 79%;
+}
+
+.pressure-management {
+  animation: pressure-management 2s;
+  width: 60%;
+}
+
+.proactivity {
+  animation: proactivity 2s;
+  width: 71%;
+}
+
+@keyframes self-motivation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 57%;
+  }
+}
+
+@keyframes organization {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+@keyframes self-discipline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 79%;
+  }
+}
+
+@keyframes pressure-management {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes proactivity {
+  from {
+    width: 0;
+  }
+  to {
+    width: 71%;
+  }
+}
+
+.list {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.list li {
+  margin-bottom: 25px;
+}
+
+.list li p {
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  .main-container-mySkills,
+  .main-container-whoIam,
+  .main-container-experiences {
+    width: 50%;
+  }
+
+  .main-container-mySkills {
+    padding-left: 30px;
+  }
+
+  .main-container-whoIam {
+    border-right: 2px white dotted;
+    padding-right: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 30px;
+  }
+
+  .skills-scheme {
+    background-color: rgb(10, 10, 131, 0);
+    border-radius: 5%;
+  }
+}
