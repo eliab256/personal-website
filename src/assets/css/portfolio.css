@@ -1,0 +1,60 @@
+.mainContainerPortfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.allWorks {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 20px;
+}
+
+.schoolWorks {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.nameSchool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: auto;
+  border-bottom: 2px white dashed;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.nameSchoolWorks h2 {
+  text-align: center;
+}
+
+.worksGrid {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .itemTitleBox h3 {
+    font-size: 23px;
+  }
+}

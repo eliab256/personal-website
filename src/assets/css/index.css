@@ -40,28 +40,22 @@ body {
   min-height: 100vh;
 }
 
-.widthController {
-  width: inherit;
-}
-
 h1 {
   font-size: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   font-style: italic;
 }
 
 h2 {
   font-size: 25px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   font-style: italic;
 }
 
 h3 {
   font-size: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   font-style: italic;
 }
 
@@ -135,14 +129,14 @@ main {
   h1,
   h2 {
     font-size: 45px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 
   h3 {
     font-size: 25px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
   }
 
   p {
@@ -161,15 +155,15 @@ main {
 @media only screen and (min-width: 961px) {
   h1,
   h2 {
-    font-size: 50px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-size: 45px;
+    padding-top: 3px;
+    padding-bottom: 3px;
   }
 
   h3 {
-    font-size: 35px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-size: 30px;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 
   p {
