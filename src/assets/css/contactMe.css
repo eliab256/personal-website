@@ -1,0 +1,121 @@
+.formContainer {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.title {
+  margin: 0 auto;
+}
+
+.formContainer p {
+  height: auto;
+  text-align: center;
+}
+
+.contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.formRow {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.formRow input[type="text"] .formRow input[type="email"] {
+  background-color: #ffffff;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+.formRow label {
+  margin: 0 auto;
+}
+
+.formRow input[type="text"]:invalid,
+.formRow input[type="email"]:invalid {
+  border: 1px solid #d55c5f;
+  color: #d55c5f;
+  box-shadow: none;
+}
+
+.formRow textarea {
+  font-size: 14px;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 7px;
+  resize: none;
+}
+
+.formRow button {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #ffffff;
+  border: solid black 2px;
+  border-radius: 5px;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.formRow button:hover {
+  background-color: rgb(10, 10, 191);
+  border-color: white;
+  color: white;
+}
+
+.formRow button:active {
+  background-color: #407fc7;
+}
+
+.contactForm label {
+  margin-bottom: 5px;
+}
+
+.successMessage {
+  backgroundcolor: "#d4edda";
+  color: "#155724";
+  padding: "12px";
+  borderradius: "4px";
+  marginbottom: "20px";
+  border: "1px solid #c3e6cb";
+}
+
+.errorMessage {
+  color: "red";
+  fontsize: "14px";
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .formRow {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  .formRow {
+    width: 60%;
+    max-width: 350px;
+  }
+}

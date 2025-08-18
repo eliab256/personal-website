@@ -13,7 +13,7 @@ export interface ProjectCardData {
   school: SchoolType;
   description: string;
   projectType: ProjectType;
-  programmingLanguage: ProgrammingLanguagesType | ProgrammingLanguagesType[];
+  programmingLanguage: ProgrammingLanguagesType[];
   gitHubLink: string;
   etherscanLink?: string | string[];
   websiteLink?: string;
