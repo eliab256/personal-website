@@ -14,12 +14,12 @@ const Portfolio: React.FC = () => {
 
   useEffect(() => {
     if (currentProjectSelected !== null) {
-      document.body.classList.add("overflow-hidden");
+      document.body.classList.add("bodyNoScroll");
     } else {
-      document.body.classList.remove("overflow-hidden");
+      document.body.classList.remove("bodyNoScroll");
     }
     return () => {
-      document.body.classList.remove("overflow-hidden");
+      document.body.classList.remove("bodyNoScroll");
     };
   }, [currentProjectSelected]);
 

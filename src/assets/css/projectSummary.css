@@ -13,7 +13,7 @@
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(4px);
   padding: 0.5rem;
-  width: 95%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.75rem;
@@ -26,12 +26,105 @@
   cursor: default;
 }
 
+.XContainer {
+  position: absolute;
+  background-color: #ef4444;
+  border-radius: 9999px;
+  transition-property: transform;
+  transition-duration: 150ms;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.XContainer:active {
+  transform: scale(0.95);
+  background-color: #dc2626;
+}
+
+.iconClose {
+  width: 1rem;
+  height: 1rem;
+  color: white;
+}
+
+/* Title Container */
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+/* Title Text */
+.titleText {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Image Container */
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+/* Image Element */
+.imageElement {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+/* Description Container */
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.75rem;
+}
+
+/* Description Text */
+.descriptionText {
+  color: #4b5563;
+  text-align: justify;
+}
+
 @media (min-width: 640px) {
   .ProjectSummaryContainer {
     padding: 0.75rem;
     width: 90%;
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .titleText {
+    font-size: 1.5rem;
+  }
+
+  .descriptionContainer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .imageElement {
+    max-width: 220px;
+  }
+
+  .imageContainer {
+    padding-top: 1.5rem;
   }
 }
 
@@ -42,6 +135,24 @@
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
   }
+
+  .titleContainer {
+    margin-bottom: 1rem;
+  }
+
+  .descriptionContainer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.125rem;
+  }
+
+  .imageElement {
+    max-width: 260px;
+  }
+
+  .titleText {
+    font-size: 1.875rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -50,5 +161,13 @@
     width: 50%;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+  }
+
+  .titleText {
+    font-size: 2.25rem;
+  }
+
+  .imageElement {
+    max-width: 220px;
   }
 }

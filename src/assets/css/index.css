@@ -32,6 +32,7 @@ body {
   overflow: auto;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  cursor: default;
 }
 
 .page {
@@ -120,6 +121,9 @@ main {
   margin: 0 auto;
 }
 
+.body-no-scroll {
+  overflow: hidden;
+}
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
 }
