@@ -11,6 +11,18 @@ export interface ProjectSummaryProps {
 const ProjectSummary: React.FC<ProjectSummaryProps> = ({ selectedProjectProp }) => {
   const dispatch = useDispatch();
   const { name, image, description, programmingLanguage, gitHubLink, etherscanLink, websiteLink, presentationDownloadLink } = selectedProjectProp;
+
+  // Funzioni helper per verificare se i link sono validi
+  const isValidLink = (link: string | string[] | undefined | null): boolean => {
+    if (!link) return false;
+    if (typeof link === "string") return link.trim() !== "";
+    if (Array.isArray(link)) return link.length > 0 && link.some((l) => l.trim() !== "");
+    return false;
+  };
+
+  const hasValidEtherscanLink = isValidLink(etherscanLink);
+  const hasValidWebsiteLink = isValidLink(websiteLink);
+
   return (
     <>
       <div className="ProjectSummaryContainer">
@@ -50,32 +62,36 @@ const ProjectSummary: React.FC<ProjectSummaryProps> = ({ selectedProjectProp }) 
         </div>
 
         {/* Etherscan Link */}
-        <div className="etherscanLinkContainer">
-          <a
-            className="etherscanLink"
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              if (Array.isArray(etherscanLink)) {
-                etherscanLink.forEach((link) => {
-                  window.open(link, "_blank");
-                });
-              } else {
-                window.open(etherscanLink, "_blank", "noopener,noreferrer");
-              }
-            }}
-            rel="noopener"
-          >
-            {`Open ${Array.isArray(etherscanLink) ? etherscanLink.length : 1} link${Array.isArray(etherscanLink) && etherscanLink.length > 1 ? "s" : ""} on Etherscan`}
-          </a>
-        </div>
+        {hasValidEtherscanLink && (
+          <div className="etherscanLinkContainer">
+            <a
+              className="etherscanLink"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                if (Array.isArray(etherscanLink)) {
+                  etherscanLink.forEach((link) => {
+                    window.open(link, "_blank");
+                  });
+                } else {
+                  window.open(etherscanLink, "_blank", "noopener,noreferrer");
+                }
+              }}
+              rel="noopener"
+            >
+              {`Open ${Array.isArray(etherscanLink) ? etherscanLink.length : 1} link${Array.isArray(etherscanLink) && etherscanLink.length > 1 ? "s" : ""} on Etherscan`}
+            </a>
+          </div>
+        )}
 
         {/* Website Link */}
-        <div className="websiteContainer">
-          <a className="websiteLink" target="_blank" rel="noopener" href={websiteLink}>
-            Website link
-          </a>
-        </div>
+        {hasValidWebsiteLink && (
+          <div className="websiteContainer">
+            <a className="websiteLink" target="_blank" rel="noopener" href={websiteLink}>
+              Website link
+            </a>
+          </div>
+        )}
 
         {/* Presentation Link */}
         <div className="PresentationContainer">

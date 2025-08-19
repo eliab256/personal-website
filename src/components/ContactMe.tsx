@@ -106,77 +106,75 @@ const ContactMe: React.FC = () => {
   };
 
   return (
-    <div className="widthController">
-      <div className="formContainer">
-        <div className="title">
-          <h1>Contacts</h1>
-        </div>
-        <p>
-          <em>Do you need help with your project?</em>
-        </p>
-        <p>
-          <em>Are you interested in starting a collaboration with me?</em>
-        </p>
-        <p>Fill out the form below</p>
-
-        {isSubmitted && <div className="successMessage">Your message has been sent successfully!</div>}
-
-        <form className="contactForm" onSubmit={sendEmail}>
-          <div className="formRow">
-            <label htmlFor="fullName">Name</label>
-            <input id="fullName" name="fullName" type="text" value={formData.fullName} onChange={handleInputChange} required className={errors.fullName ? "error" : ""} />
-            {errors.fullName && <span className="errorMessage">{errors.fullName}</span>}
-          </div>
-
-          <div className="formRow">
-            <label htmlFor="company">Company</label>
-            <input id="company" name="company" type="text" value={formData.company} onChange={handleInputChange} required className={errors.company ? "error" : ""} />
-            {errors.company && <span className="errorMessage">{errors.company}</span>}
-          </div>
-
-          <div className="formRow">
-            <label htmlFor="email">Email address</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="joe@example.com"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
-              className={errors.email ? "error" : ""}
-            />
-            {errors.email && <span className="errorMessage">{errors.email}</span>}
-          </div>
-
-          <div className="formRow">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Write your message here"
-              value={formData.message}
-              onChange={handleInputChange}
-              required
-              className={errors.message ? "error" : ""}
-            />
-            {errors.message && <span className="errorMessage">{errors.message}</span>}
-          </div>
-
-          <div className="formRow">
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              style={{
-                opacity: isSubmitting ? 0.7 : 1,
-                cursor: isSubmitting ? "not-allowed" : "pointer",
-              }}
-            >
-              {isSubmitting ? "Sending..." : "Submit"}
-            </button>
-          </div>
-        </form>
+    <div className="formContainer">
+      <div className="title">
+        <h1>Contacts</h1>
       </div>
+      <p>
+        <em>Do you need help with your project?</em>
+      </p>
+      <p>
+        <em>Are you interested in starting a collaboration with me?</em>
+      </p>
+      <p>Fill out the form below</p>
+
+      {isSubmitted && <div className="successMessage">Your message has been sent successfully!</div>}
+
+      <form className="contactForm" onSubmit={sendEmail}>
+        <div className="formRow">
+          <label htmlFor="fullName">Name</label>
+          <input id="fullName" name="fullName" type="text" value={formData.fullName} onChange={handleInputChange} required className={errors.fullName ? "error" : ""} />
+          {errors.fullName && <span className="errorMessage">{errors.fullName}</span>}
+        </div>
+
+        <div className="formRow">
+          <label htmlFor="company">Company</label>
+          <input id="company" name="company" type="text" value={formData.company} onChange={handleInputChange} required className={errors.company ? "error" : ""} />
+          {errors.company && <span className="errorMessage">{errors.company}</span>}
+        </div>
+
+        <div className="formRow">
+          <label htmlFor="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="joe@example.com"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            className={errors.email ? "error" : ""}
+          />
+          {errors.email && <span className="errorMessage">{errors.email}</span>}
+        </div>
+
+        <div className="formRow">
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here"
+            value={formData.message}
+            onChange={handleInputChange}
+            required
+            className={errors.message ? "error" : ""}
+          />
+          {errors.message && <span className="errorMessage">{errors.message}</span>}
+        </div>
+
+        <div className="formRow">
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            style={{
+              opacity: isSubmitting ? 0.7 : 1,
+              cursor: isSubmitting ? "not-allowed" : "pointer",
+            }}
+          >
+            {isSubmitting ? "Sending..." : "Submit"}
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
