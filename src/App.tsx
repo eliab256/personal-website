@@ -4,9 +4,8 @@ import Home from "./components/Home";
 import ContactMe from "./components/ContactMe";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
-import "./App.css";
 import { useSelector } from "react-redux";
-import { type PageState } from "./redux/pagesSlice";
+import type { PageState } from "./types/pageTypes";
 
 function App() {
   const currentOpenPage = useSelector((state: { currentPage: { currentPage: PageState } }) => state.currentPage.currentPage);

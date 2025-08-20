@@ -39,6 +39,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  /* background-image: url("../img/sfondi/neroBlu2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
 }
 
 h1 {
@@ -46,6 +51,7 @@ h1 {
   padding-top: 3px;
   padding-bottom: 3px;
   font-style: italic;
+  /* color: white; */
 }
 
 h2 {
@@ -53,6 +59,7 @@ h2 {
   padding-top: 3px;
   padding-bottom: 3px;
   font-style: italic;
+  /* color: white; */
 }
 
 h3 {
@@ -117,7 +124,7 @@ main {
   padding-bottom: 10px;
   flex: 0;
   width: 80%;
-  border-bottom: dashed white 3px;
+  /* border-bottom: dashed white 3px; */
   margin: 0 auto;
 }
 
@@ -125,11 +132,11 @@ main {
   overflow: hidden;
 }
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {
+@media (max-width: 400px) {
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
+@media (min-width: 768px) {
   h1,
   h2 {
     font-size: 45px;
@@ -156,7 +163,7 @@ main {
 }
 
 /* Desktop Styles */
-@media only screen and (min-width: 961px) {
+@media (min-width: 1024px) {
   h1,
   h2 {
     font-size: 45px;
@@ -181,7 +188,6 @@ main {
     margin-top: 80px;
     padding-left: 30px;
     padding-right: 30px;
-
     align-items: stretch;
   }
 }
