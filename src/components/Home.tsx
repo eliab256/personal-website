@@ -1,13 +1,14 @@
 import personalPicture from "../assets/img/personalPicture.jpg";
+import "../assets/css/home.css";
 
 const Home: React.FC = () => {
   return (
-    <div className="width-controller">
+    <>
       <div className="title">
-        <h1>Who is Elia Bordoni</h1>
+        <h1>Who I am</h1>
       </div>
-      <div className="main-container">
-        <div className="main-items my-description">
+      <div className="mainContainer">
+        <div className="mainItems myDescription">
           <p>
             Hi, my name is Elia and I am 27 years old. I started studying the blockchain master program here on start2impact to give a new direction to my career and my
             life. I initially attended the Agricultural Technical Institute but soon realized it wasn't my path. Passionate about music, I pursued it while working as an
@@ -17,11 +18,11 @@ const Home: React.FC = () => {
             developer.
           </p>
         </div>
-        <div className="main-items personal-picture">
-          <img src={personalPicture} alt="personal-picture" />
+        <div className="mainItems personalPicture">
+          <img src={personalPicture} alt="personalPicture" />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
