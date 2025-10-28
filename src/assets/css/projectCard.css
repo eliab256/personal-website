@@ -1,3 +1,19 @@
+.worksGridItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: black 1px solid;
+  border-radius: 60px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  cursor: pointer;
+  padding: 0.3%;
+}
+
 .itemImageBox {
   aspect-ratio: 1 / 1;
   display: flex;
@@ -21,22 +37,6 @@
   z-index: 2;
   height: 20%;
   margin-bottom: 25px;
-}
-
-.worksGridItem {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border: black 1px solid;
-  border-radius: 10px;
-  width: 100%;
-  aspect-ratio: 1/1;
-  margin: 10px;
-  background-color: rgba(255, 255, 255, 0.6);
-  color: black;
-  cursor: pointer;
-  padding: 0.3%;
 }
 
 .worksGridItem img {
