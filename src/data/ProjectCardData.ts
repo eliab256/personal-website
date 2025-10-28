@@ -9,8 +9,18 @@ import ReactAndTypescriptAndWeb3 from "../assets/img/logosPorgrammingLanguage/Ty
 import SolidityBasic from "../assets/img/logosPorgrammingLanguage/Solidity.png";
 import HardhatProject from "../assets/img/logosPorgrammingLanguage/Hardhat.png";
 import FoundryProject from "../assets/img/logosPorgrammingLanguage/Foundry.png";
+import DVD1 from "../assets/img/DamnVulnerableDefiImgs/DVD1.png";
+//import DVD2 from "../assets/img/DamnVulnerableDefiImgs/DVD2.png";
+//import DVD3 from "../assets/img/DamnVulnerableDefiImgs/DVD3.png";
+//import DVD4 from "../assets/img/DamnVulnerableDefiImgs/DVD4.png";
+//import DVD5 from "../assets/img/DamnVulnerableDefiImgs/DVD5.png";
+//import DVD6 from "../assets/img/DamnVulnerableDefiImgs/DVD6.png";
+//import DVD7 from "../assets/img/DamnVulnerableDefiImgs/DVD7.png";
+//import DVD8 from "../assets/img/DamnVulnerableDefiImgs/DVD8.png";
+//import DVD9 from "../assets/img/DamnVulnerableDefiImgs/DVD9.png";
 
 const projectCardData: ProjectCardData[] = [
+  //START2Impact
   {
     name: "Blockchain Introduction",
     image: blockchainIntroduction,
@@ -139,6 +149,18 @@ const projectCardData: ProjectCardData[] = [
     etherscanLink: ["https://sepolia.etherscan.io/address/0x54B3baABA19A85E9231D9545570FEE3C7Fd97f71#code"],
     presentationDownloadLink:
       "https://www.dropbox.com/scl/fi/mt54w5gw63nnjwp7eu4kk/Elia-Bordoni-s-Ethereum-Advanced-Project.pdf?rlkey=w3j9u6q7j5ne9m70sngwfazo3&st=b0z3rof0&dl=1",
+  },
+  //DAMN VULNERABLE DEFI
+  {
+    name: "Unstoppable",
+    image: DVD1,
+    school: "damn vulnerable defi",
+    description:
+      "There’s a tokenized vault with a million DVT tokens deposited. It’s offering flash loans for free, until the grace period ends. To catch any bugs before going 100% permissionless, the developers decided to run a live beta in testnet. There’s a monitoring contract to check liveness of the flashloan feature. Starting with 10 DVT tokens in balance, show that it’s possible to halt the vault. It must stop offering flash loans.",
+    projectType: "blockchain",
+    programmingLanguage: ["solidity"],
+    gitHubLink: "https://github.com/eliab256/damn-vulnerable-defi-project.git",
+    presentationDownloadLink: "https://www.dropbox.com/scl/fi/2py0mq1l3nqncqthslzg5/Unstoppable-Reports.zip?rlkey=mnj0hoyx45s314de9d3s8y7gw&st=hcdt3xhm&dl=1",
   },
 ];
 
