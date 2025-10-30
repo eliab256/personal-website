@@ -11,8 +11,8 @@ import HardhatProject from "../assets/img/logosPorgrammingLanguage/Hardhat.png";
 import FoundryProject from "../assets/img/logosPorgrammingLanguage/Foundry.png";
 import DVD1 from "../assets/img/DamnVulnerableDefiImgs/DVD1.png";
 //import DVD2 from "../assets/img/DamnVulnerableDefiImgs/DVD2.png";
-import DVD3 from "../assets/img/DamnVulnerableDefiImgs/DVD3.png";
-//import DVD4 from "../assets/img/DamnVulnerableDefiImgs/DVD4.png";
+//import DVD3 from "../assets/img/DamnVulnerableDefiImgs/DVD3.png";
+import DVD4 from "../assets/img/DamnVulnerableDefiImgs/DVD4.png";
 //import DVD5 from "../assets/img/DamnVulnerableDefiImgs/DVD5.png";
 //import DVD6 from "../assets/img/DamnVulnerableDefiImgs/DVD6.png";
 //import DVD7 from "../assets/img/DamnVulnerableDefiImgs/DVD7.png";
@@ -164,7 +164,7 @@ const projectCardData: ProjectCardData[] = [
   },
   {
     name: "Side-Entrance",
-    image: DVD3,
+    image: DVD4,
     school: "damn vulnerable defi",
     description:
       "A surprisingly simple pool allows anyone to deposit ETH, and withdraw it at any point in time. It has 1000 ETH in balance already, and is offering free flashloans using the deposited ETH to promote their system. You start with 1 ETH in balance. Pass the challenge by rescuing all ETH from the pool and depositing it in the designated recovery account.",
