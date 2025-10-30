@@ -11,7 +11,7 @@ import HardhatProject from "../assets/img/logosPorgrammingLanguage/Hardhat.png";
 import FoundryProject from "../assets/img/logosPorgrammingLanguage/Foundry.png";
 import DVD1 from "../assets/img/DamnVulnerableDefiImgs/DVD1.png";
 //import DVD2 from "../assets/img/DamnVulnerableDefiImgs/DVD2.png";
-//import DVD3 from "../assets/img/DamnVulnerableDefiImgs/DVD3.png";
+import DVD3 from "../assets/img/DamnVulnerableDefiImgs/DVD3.png";
 //import DVD4 from "../assets/img/DamnVulnerableDefiImgs/DVD4.png";
 //import DVD5 from "../assets/img/DamnVulnerableDefiImgs/DVD5.png";
 //import DVD6 from "../assets/img/DamnVulnerableDefiImgs/DVD6.png";
@@ -161,6 +161,17 @@ const projectCardData: ProjectCardData[] = [
     programmingLanguage: ["solidity"],
     gitHubLink: "https://github.com/eliab256/damn-vulnerable-defi-project.git",
     presentationDownloadLink: "https://www.dropbox.com/scl/fi/2py0mq1l3nqncqthslzg5/Unstoppable-Reports.zip?rlkey=mnj0hoyx45s314de9d3s8y7gw&st=hcdt3xhm&dl=1",
+  },
+  {
+    name: "Side-Entrance",
+    image: DVD3,
+    school: "damn vulnerable defi",
+    description:
+      "A surprisingly simple pool allows anyone to deposit ETH, and withdraw it at any point in time. It has 1000 ETH in balance already, and is offering free flashloans using the deposited ETH to promote their system. You start with 1 ETH in balance. Pass the challenge by rescuing all ETH from the pool and depositing it in the designated recovery account.",
+    projectType: "blockchain",
+    programmingLanguage: ["solidity"],
+    gitHubLink: "https://github.com/eliab256/damn-vulnerable-defi-project.git",
+    presentationDownloadLink: "https://www.dropbox.com/scl/fi/23301zmix8ofz70arjj97/Side-Entrance-Reports.zip?rlkey=9h611e7pf7cctbd9rb02n2nas&st=70p3c8dh&dl=1",
   },
 ];
 
