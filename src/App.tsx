@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
+import Certifications from "./components/Certifications";
 import Home from "./components/Home";
 import ContactMe from "./components/ContactMe";
 import Portfolio from "./components/Portfolio";
@@ -12,6 +13,7 @@ function App() {
 
   const pageComponents = {
     home: <Home />,
+    certifications: <Certifications />,
     portfolio: <Portfolio />,
     aboutMe: <AboutMe />,
     contactMe: <ContactMe />,

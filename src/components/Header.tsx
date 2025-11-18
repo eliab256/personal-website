@@ -18,6 +18,7 @@ const Header: React.FC = () => {
         </div>
         <div className="header-items menu">
           <button onClick={() => dispatch(setCurrentPage("aboutMe"))}>About Me</button>
+          <button onClick={() => dispatch(setCurrentPage("certifications"))}>Certifications</button>
           <button onClick={() => dispatch(setCurrentPage("portfolio"))}>Portfolio</button>
           <button onClick={() => dispatch(setCurrentPage("contactMe"))}>ContactMe</button>
         </div>

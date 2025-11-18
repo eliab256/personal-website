@@ -1,1 +1,1 @@
-export type PageState = "home" | "portfolio" | "contactMe" | "aboutMe";
+export type PageState = "home" | "certifications" | "portfolio" | "contactMe" | "aboutMe";
