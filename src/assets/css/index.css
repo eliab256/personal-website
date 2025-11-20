@@ -1,8 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: "Roboto";
@@ -25,172 +23,81 @@
   font-weight: 700;
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  cursor: default;
-  /* overflow: hidden; */
-}
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
 
-.page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  /* background-image: url("../img/sfondi/neroBlu2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
-}
+  html,
+  body {
+    @apply h-full w-full overflow-auto font-roboto font-light cursor-default bg-gradient-logo text-white;
+  }
 
-h1 {
-  font-size: 30px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-style: italic;
-  /* color: white; */
-}
+  h1 {
+    @apply text-[30px] md:text-[45px] lg:text-[45px] py-[3px] md:py-[2px] lg:py-[3px] italic text-white;
+  }
 
-h2 {
-  font-size: 25px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-style: italic;
-  /* color: white; */
-}
-
-h3 {
-  font-size: 20px;
-  font-style: italic;
-}
-
-p {
-  font-size: 13px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  font-style: normal;
-  text-align: justify;
-}
-
-button {
-  cursor: pointer;
-}
-
-input::placeholder {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  color: rgba(0, 0, 0, 0.538);
-}
-
-textarea::placeholder {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-  color: rgba(0, 0, 0, 0.538);
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-  background: black;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-}
-
-.width-controller {
-  width: inherit;
-}
-
-main {
-  margin-top: 40px;
-  width: 100%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.title {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-  height: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  flex: 0;
-  width: 80%;
-  /* border-bottom: dashed white 3px; */
-  margin: 0 auto;
-}
-
-.body-no-scroll {
-  overflow: hidden;
-}
-/* Mobile Styles */
-@media (max-width: 400px) {
-}
-
-/* Tablet Styles */
-@media (min-width: 768px) {
-  h1,
   h2 {
-    font-size: 45px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    @apply text-[25px] md:text-[45px] lg:text-[45px] py-[3px] md:py-[2px] lg:py-[3px] italic text-white;
   }
 
   h3 {
-    font-size: 25px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    @apply text-[20px] md:text-[25px] lg:text-[32px] py-0 md:py-[1px] lg:py-[2px] italic text-white;
+  }
+
+  h4 {
+    @apply text-white;
   }
 
   p {
-    font-size: 20px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    text-align: justify;
+    @apply text-[13px] md:text-[20px] lg:text-[22px] mt-[10px] md:mt-[15px] lg:mt-[15px] mb-[15px] md:mb-[20px] lg:mb-[20px] text-justify text-white;
   }
 
-  main {
-    margin-top: 50px;
+  button {
+    @apply cursor-pointer;
+  }
+
+  input::placeholder {
+    @apply font-roboto font-light text-black/[0.538];
+  }
+
+  textarea::placeholder {
+    @apply font-roboto font-light italic text-black/[0.538];
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-[5px] bg-logo-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white rounded-[5px];
   }
 }
 
-/* Desktop Styles */
-@media (min-width: 1024px) {
-  h1,
-  h2 {
-    font-size: 45px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+@layer components {
+  .page {
+    @apply flex flex-col min-h-screen bg-gradient-logo;
   }
 
-  h3 {
-    font-size: 32px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+  .title {
+    @apply flex items-center justify-center text-center h-auto py-[10px] flex-none w-4/5 mx-auto;
   }
 
-  p {
-    font-size: 22px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    text-align: justify;
+  .body-no-scroll {
+    @apply overflow-hidden;
+  }
+
+  .bodyNoScroll {
+    @apply overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .width-controller {
+    @apply w-full;
   }
 
   main {
-    margin-top: 80px;
-    padding-left: 30px;
-    padding-right: 30px;
-    align-items: stretch;
+    @apply mt-[40px] md:mt-[50px] lg:mt-[80px] lg:px-[30px] w-full flex-1 flex flex-col items-center lg:items-stretch;
   }
 }

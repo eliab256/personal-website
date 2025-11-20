@@ -4,6 +4,7 @@ import Certifications from "./components/Certifications";
 import Home from "./components/Home";
 import ContactMe from "./components/ContactMe";
 import Portfolio from "./components/Portfolio";
+import AuditPortfolio from "./components/AuditPortfolio";
 import Footer from "./components/Footer";
 import { useSelector } from "react-redux";
 import type { PageState } from "./types/pageTypes";
@@ -15,6 +16,7 @@ function App() {
     home: <Home />,
     certifications: <Certifications />,
     portfolio: <Portfolio />,
+    auditPortfolio: <AuditPortfolio />,
     aboutMe: <AboutMe />,
     contactMe: <ContactMe />,
   };

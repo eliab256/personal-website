@@ -1,7 +1,6 @@
 import React, { useState, type FormEvent, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import type { FormData, FormErrors } from "../types/formTypes";
-import "../assets/css/contactMe.css";
 
 const ContactMe: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -106,35 +105,57 @@ const ContactMe: React.FC = () => {
   };
 
   return (
-    <div className="formContainer">
-      <div className="title">
-        <h1>Contacts</h1>
+    <div className="text-center w-full">
+      <div className="title py-2">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl">Contacts</h1>
       </div>
-      <p>
+      <p className="h-auto text-center text-white text-xs md:text-sm lg:text-base my-1">
         <em>Do you need help with your project?</em>
       </p>
-      <p>
+      <p className="h-auto text-center text-white text-xs md:text-sm lg:text-base my-1">
         <em>Are you interested in starting a collaboration with me?</em>
       </p>
-      <p>Fill out the form below</p>
+      <p className="h-auto text-center text-white text-xs md:text-sm lg:text-base my-1">Fill out the form below</p>
 
-      {isSubmitted && <div className="successMessage">Your message has been sent successfully!</div>}
+      {isSubmitted && <div className="bg-green-100 text-green-800 p-3 rounded mb-5 border border-green-300">Your message has been sent successfully!</div>}
 
-      <form className="contactForm" onSubmit={sendEmail}>
-        <div className="formRow">
-          <label htmlFor="fullName">Name</label>
-          <input id="fullName" name="fullName" type="text" value={formData.fullName} onChange={handleInputChange} required className={errors.fullName ? "error" : ""} />
-          {errors.fullName && <span className="errorMessage">{errors.fullName}</span>}
+      <form className="flex justify-center items-center flex-col rounded-md w-full" onSubmit={sendEmail}>
+        <div className="flex justify-start flex-col flex-wrap mt-2 w-full md:w-4/5 lg:w-3/5 md:max-w-[300px] lg:max-w-[350px]">
+          <label htmlFor="fullName" className="mx-auto mb-0.5 text-white text-xs md:text-sm">
+            Name
+          </label>
+          <input
+            id="fullName"
+            name="fullName"
+            type="text"
+            value={formData.fullName}
+            onChange={handleInputChange}
+            required
+            className={`bg-white border rounded-sm w-full p-2 text-sm text-black ${errors.fullName ? "border-red-500" : "border-gray-300"}`}
+          />
+          {errors.fullName && <span className="text-red-500 text-sm">{errors.fullName}</span>}
         </div>
 
-        <div className="formRow">
-          <label htmlFor="company">Company</label>
-          <input id="company" name="company" type="text" value={formData.company} onChange={handleInputChange} required className={errors.company ? "error" : ""} />
-          {errors.company && <span className="errorMessage">{errors.company}</span>}
+        <div className="flex justify-start flex-col flex-wrap mt-2 w-full md:w-4/5 lg:w-3/5 md:max-w-[300px] lg:max-w-[350px]">
+          <label htmlFor="company" className="mx-auto mb-0.5 text-white text-xs md:text-sm">
+            Company
+          </label>
+          <input
+            id="company"
+            name="company"
+            type="text"
+            value={formData.company}
+            onChange={handleInputChange}
+            required
+            className={`bg-white border rounded-sm w-full p-2 text-sm text-black ${errors.company ? "border-red-500" : "border-gray-300"}`}
+          />
+          {errors.company && <span className="text-red-500 text-sm">{errors.company}</span>}
         </div>
 
-        <div className="formRow">
-          <label htmlFor="email">Email address</label>
+        <div className="flex justify-start flex-col flex-wrap mt-2 w-full md:w-4/5 lg:w-3/5 md:max-w-[300px] lg:max-w-[350px]">
+          <label htmlFor="email" className="mx-auto mb-0.5 text-white text-xs md:text-sm">
+            Email address
+          </label>
           <input
             id="email"
             name="email"
@@ -143,13 +164,15 @@ const ContactMe: React.FC = () => {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className={errors.email ? "error" : ""}
+            className={`bg-white border rounded-sm w-full p-2 text-sm text-black ${errors.email ? "border-red-500" : "border-gray-300"}`}
           />
-          {errors.email && <span className="errorMessage">{errors.email}</span>}
+          {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
         </div>
 
-        <div className="formRow">
-          <label htmlFor="message">Message</label>
+        <div className="flex justify-start flex-col flex-wrap mt-2 w-full md:w-4/5 lg:w-3/5 md:max-w-[300px] lg:max-w-[350px]">
+          <label htmlFor="message" className="mx-auto mb-0.5 text-white text-xs md:text-sm">
+            Message
+          </label>
           <textarea
             id="message"
             name="message"
@@ -157,19 +180,18 @@ const ContactMe: React.FC = () => {
             value={formData.message}
             onChange={handleInputChange}
             required
-            className={errors.message ? "error" : ""}
+            className={`text-sm border rounded-sm min-h-[120px] mb-1 p-2 resize-none text-black ${errors.message ? "border-red-500" : "border-gray-300"}`}
           />
-          {errors.message && <span className="errorMessage">{errors.message}</span>}
+          {errors.message && <span className="text-red-500 text-sm">{errors.message}</span>}
         </div>
 
-        <div className="formRow">
+        <div className="flex justify-start flex-col flex-wrap mt-2 w-full md:w-4/5 lg:w-3/5 md:max-w-[300px] lg:max-w-[350px]">
           <button
             type="submit"
             disabled={isSubmitting}
-            style={{
-              opacity: isSubmitting ? 0.7 : 1,
-              cursor: isSubmitting ? "not-allowed" : "pointer",
-            }}
+            className={`text-lg md:text-xl font-bold text-black bg-white border-2 border-black rounded-md py-2 px-8 cursor-pointer hover:bg-logo-blue hover:border-white hover:text-white active:bg-blue-700 transition-colors duration-200 ${
+              isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+            }`}
           >
             {isSubmitting ? "Sending..." : "Submit"}
           </button>
