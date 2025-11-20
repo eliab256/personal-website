@@ -1,5 +1,4 @@
 import "../assets/css/aboutMe.css";
-import personalPicture from "../assets/img/personalPicture.jpg";
 
 const AboutMe: React.FC = () => {
     return (
@@ -10,28 +9,29 @@ const AboutMe: React.FC = () => {
                 </div>
                 <div className="main-items-whoIam my-description">
                     <p>
-                        Hi, my name is Elia Bordoni, I'm 27 years old, and I live in a town near Milan. My educational journey started in high school where I
-                        attended the Gallini Agricultural Technical Institute in Voghera. After finishing school, I realized that it wasn't what I wanted to do.
-                        At that time, my greatest passion was music, so I decided to pursue this path and try to make it a career.
+                        Hi, I’m Elia, and at 27 years old I decided to rewrite my path.
                         <br />
                         <br />
-                        I attended various schools and online courses (all self-funded) while working as an electrician in my father's company. For about seven
-                        years, I juggled my job as an electrician and my passion for music. This passion allowed and, in a sense, forced me to develop various
-                        soft skills, opening up the world of personal growth and inner development, of which I am a great enthusiast.
+                        For years I followed very different paths: agricultural studies, music, work as an electrician. All experiences that gave me discipline,
+                        independence, and a strong desire to improve myself. Meanwhile, my curiosity for the crypto world was growing, until I realized that
+                        what fascinated me wasn’t just the markets… but the technology that makes them possible.
                         <br />
                         <br />
-                        Among the various aspects of life that I wanted to develop was the economic side. This led me to study personal finance and investments,
-                        as well as to foster a strong interest in cryptocurrencies and blockchain technology. After years, I realized that music and creativity
-                        were not for me, and I abandoned this life project. After an initial period of coping with the blow, I settled down and, deciding what
-                        to do with my future.
+                        So I started a practical path with Start2Impact, choosing to build real projects instead of studying for years without touching code.
+                        While learning, I pushed myself further with Cyfrin Updraft: there I discovered how much smart contracts fascinated me and the way they
+                        give life to decentralized systems.
                         <br />
-                        <br />I decided to combine my passion for cryptocurrencies with my latent interest in computer science. This is why I decided to start
-                        studying the Start2Impact master program, confident that it will help me create a career that excites me and brings great satisfaction
-                        after the disappointment of abandoning my music project.
+                        <br />
+                        After my first projects — including a DAO that really challenged me — I understood what I truly wanted to do: make web3 a safer place. I
+                        studied security through Johnny Time’s course, learning to analyze and prevent vulnerabilities such as reentrancy, flash-loan attacks,
+                        DoS, and gas griefing.
+                        <br />
+                        <br />
+                        Today I hunt for bugs and vulnerabilities through competitive audits on Code4rena and Sherlock. And while continuing to improve my
+                        skills, I look ahead: I would like to join an auditing team, collaborate with other researchers, and contribute to the development of
+                        increasingly secure protocols.
+                        <br />
                     </p>
-                </div>
-                <div className="main-items-whoIam my-photo">
-                    <img src={personalPicture} alt="personal-picture" className="personal-picture" />
                 </div>
             </div>
             <div className="main-container-mySkills">

@@ -19,3 +19,27 @@ export interface ProjectCardData {
   websiteLink?: string;
   presentationDownloadLink: string;
 }
+
+export type PlatformType = "code4rena" | "sherlock" | "cantinao" | "immunefi" | "cyfrin CodeHawks";
+export const platforms: PlatformType[] = ["code4rena", "sherlock", "cantinao", "immunefi", "cyfrin CodeHawks"];
+
+export type ProjectClass = "DeFi" | "NFT" | "DAO" | "Bridge" | "RWA";
+export const projectClasses: ProjectClass[] = ["DeFi", "NFT", "DAO", "Bridge", "RWA"];
+
+export type DevelopmentFrameworkType = "hardhat" | "foundry" | "brownie";
+export const developmentFrameworks: DevelopmentFrameworkType[] = ["hardhat", "foundry", "brownie"];
+
+export interface AuditCardData {
+  name: string;
+  image: string;
+  platform: PlatformType;
+  description: string;
+  projectClass: ProjectClass;
+  programmingLanguage: ProgrammingLanguagesType[];
+  developmentFramework: DevelopmentFrameworkType;
+  gitHubLink: string;
+  presentationDownloadLink: string;
+  platformLink: string;
+}
+
+
