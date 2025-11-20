@@ -1,45 +1,46 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url("../Font/roboto_light_macroman/Roboto-Light-webfont.woff") format("woff");
-    font-style: normal;
-    font-weight: 300;
+  font-family: "Roboto";
+  src: url("../Font/roboto_light_macroman/Roboto-Light-webfont.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url("../Font/roboto_lightitalic_macroman/Roboto-LightItalic-webfont.woff") format("woff");
-    font-style: italic;
-    font-weight: 300;
+  font-family: "Roboto";
+  src: url("../Font/roboto_lightitalic_macroman/Roboto-LightItalic-webfont.woff") format("woff");
+  font-style: italic;
+  font-weight: 300;
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url("../Font/roboto_bold_macroman/Roboto-Bold-webfont.woff") format("woff");
-    font-style: normal;
-    font-weight: 700;
+  font-family: "Roboto";
+  src: url("../Font/roboto_bold_macroman/Roboto-Bold-webfont.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
 }
 
 html,
 body {
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    cursor: default;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  cursor: default;
+  /* overflow: hidden; */
 }
 
 .page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* background-image: url("../img/sfondi/neroBlu2.png");
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* background-image: url("../img/sfondi/neroBlu2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,91 +48,91 @@ body {
 }
 
 h1 {
-    font-size: 30px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    font-style: italic;
-    /* color: white; */
+  font-size: 30px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-style: italic;
+  /* color: white; */
 }
 
 h2 {
-    font-size: 25px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    font-style: italic;
-    /* color: white; */
+  font-size: 25px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-style: italic;
+  /* color: white; */
 }
 
 h3 {
-    font-size: 20px;
-    font-style: italic;
+  font-size: 20px;
+  font-style: italic;
 }
 
 p {
-    font-size: 13px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    font-style: normal;
-    text-align: justify;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-style: normal;
+  text-align: justify;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 input::placeholder {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgba(0, 0, 0, 0.538);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.538);
 }
 
 textarea::placeholder {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    color: rgba(0, 0, 0, 0.538);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.538);
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-    background: black;
+  width: 5px;
+  background: black;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
 }
 
 .width-controller {
-    width: inherit;
+  width: inherit;
 }
 
 main {
-    margin-top: 40px;
-    width: 100%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    height: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    flex: 0;
-    width: 80%;
-    /* border-bottom: dashed white 3px; */
-    margin: 0 auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex: 0;
+  width: 80%;
+  /* border-bottom: dashed white 3px; */
+  margin: 0 auto;
 }
 
 .body-no-scroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 /* Mobile Styles */
 @media (max-width: 400px) {
@@ -139,57 +140,57 @@ main {
 
 /* Tablet Styles */
 @media (min-width: 768px) {
-    h1,
-    h2 {
-        font-size: 45px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-    }
+  h1,
+  h2 {
+    font-size: 45px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
 
-    h3 {
-        font-size: 25px;
-        padding-top: 1px;
-        padding-bottom: 1px;
-    }
+  h3 {
+    font-size: 25px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
 
-    p {
-        font-size: 20px;
-        margin-top: 15px;
-        margin-bottom: 20px;
-        text-align: justify;
-    }
+  p {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
 
-    main {
-        margin-top: 50px;
-    }
+  main {
+    margin-top: 50px;
+  }
 }
 
 /* Desktop Styles */
 @media (min-width: 1024px) {
-    h1,
-    h2 {
-        font-size: 45px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-    }
+  h1,
+  h2 {
+    font-size: 45px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
 
-    h3 {
-        font-size: 32px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-    }
+  h3 {
+    font-size: 32px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
 
-    p {
-        font-size: 22px;
-        margin-top: 15px;
-        margin-bottom: 20px;
-        text-align: justify;
-    }
+  p {
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
 
-    main {
-        margin-top: 80px;
-        padding-left: 30px;
-        padding-right: 30px;
-        align-items: stretch;
-    }
+  main {
+    margin-top: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: stretch;
+  }
 }
