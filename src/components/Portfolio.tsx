@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { type ProjectName } from "../redux/selectedProjectSlice";
 import ProjectCard from "./ProjectCard";
 import projectCardData from "../data/ProjectCardData";
+import auditCardData from "../data/AuditCardData";
 // import type { ProjectType, SchoolType, ProgrammingLanguagesType } from "../types/projectTypes";
 import { schools } from "../types/projectTypes";
 import ProjectSummary from "./ProjectSummary";
