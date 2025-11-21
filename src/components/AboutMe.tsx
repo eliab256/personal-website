@@ -165,7 +165,7 @@ const AboutMe: React.FC = () => {
         <div className="flex flex-col justify-center items-center w-full mt-4">
           <p className="text-white">
             Here you can see an in-depth description of my softskills. Every value above 30 can be considered immutable. Watch the full report{" "}
-            <a href="i-Profile.html" rel="noopener" target="_blank" className="text-logo-light-blue hover:underline">
+            <a href="i-Profile.html" rel="noopener" target="_blank" className="text-white hover:underline">
               here
             </a>
             .
