@@ -14,33 +14,31 @@ const AuditCard: React.FC<AuditCardProps> = ({ auditProp }) => {
     <div
       onClick={() => dispatch(setSelectedProject(name))}
       role="button"
-      className="flex flex-col justify-between items-center border border-white md:border-2 lg:border-[3px] rounded-[60px] w-full md:w-[42%] lg:w-[18%] aspect-square m-2.5 bg-white/60 text-black cursor-pointer p-[0.3%] hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-2xl"
+      className="group relative flex flex-col justify-between items-center border border-white/30 rounded-3xl w-full md:w-[42%] lg:w-[18%] aspect-square m-2.5 bg-white/10 backdrop-blur-sm text-white cursor-pointer p-6 hover:scale-[1.02] hover:bg-white/20 transition-all duration-500 shadow-xl hover:shadow-2xl hover:border-white/60"
     >
-      <div className="aspect-square flex items-center justify-center w-4/5 h-[65%] mx-auto flex-1 p-[2%] relative overflow-hidden">
-        <img src={image} alt={name} className="max-w-full max-h-full object-contain w-full h-full" />
+      <div className="w-full h-[55%] flex items-center justify-center mb-3 overflow-hidden rounded-2xl bg-white/5 p-4">
+        <img src={image} alt={name} className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110" />
       </div>
-      <div className="flex justify-center text-center items-center w-full z-[2] h-[20%] mb-6">
-        <h3 className="text-black">{name}</h3>
-      </div>
-      <div className="h-[13%] flex flex-col justify-center items-center w-full">
-        <h4 className="text-black">{projectClass}</h4>
-        <div className="flex flex-row gap-2.5 justify-center items-center flex-wrap mb-4">
-          {programmingLanguage.map((lang, index) => (
-            <h4 key={index} className="text-black">
-              {lang}
-            </h4>
-          ))}
-        </div>
-        <div className="flex justify-center items-center">
-          <h4 className="text-black">{developmentFramework}</h4>
-        </div>
-        {findingsCount && (
-          <div className="flex justify-center items-center">
-            <h4 className="text-black">
-              Findings: Low {findingsCount[0]} | Medium {findingsCount[1]} | High {findingsCount[2]}
-            </h4>
+      <div className="flex-1 flex flex-col justify-between items-center w-full">
+        <h3 className="text-white text-center mb-2 font-normal text-lg md:text-xl lg:text-2xl">{name}</h3>
+        <div className="flex flex-col gap-2 items-center w-full">
+          <span className="text-xs md:text-sm text-white/70 uppercase tracking-wider">{projectClass}</span>
+          <div className="flex flex-row gap-2 justify-center items-center flex-wrap">
+            {programmingLanguage.map((lang, index) => (
+              <span key={index} className="px-2 py-1 bg-white/10 border border-white/30 rounded-full text-xs text-white backdrop-blur-sm">
+                {lang}
+              </span>
+            ))}
+            <span className="px-2 py-1 bg-white/10 border border-white/30 rounded-full text-xs text-white/60 backdrop-blur-sm">{developmentFramework}</span>
           </div>
-        )}
+          {findingsCount && (
+            <div className="flex gap-2 mt-2">
+              <span className="px-2 py-0.5 bg-green-500/20 border border-green-500/40 rounded text-xs text-green-300">L:{findingsCount[0]}</span>
+              <span className="px-2 py-0.5 bg-yellow-500/20 border border-yellow-500/40 rounded text-xs text-yellow-300">M:{findingsCount[1]}</span>
+              <span className="px-2 py-0.5 bg-red-500/20 border border-red-500/40 rounded text-xs text-red-300">H:{findingsCount[2]}</span>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

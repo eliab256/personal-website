@@ -38,17 +38,17 @@ const Header: React.FC = () => {
             <span className="absolute bottom-[0.3em] left-0 w-0 h-[0.15em] bg-gradient-to-r from-logo-light-blue to-logo-dark rounded-[30px] transition-all duration-500 group-hover:w-full group-focus:w-full group-focus:transition-none"></span>
           </button>
           <button
-            onClick={() => dispatch(setCurrentPage("portfolio"))}
-            className="bg-transparent border-none text-black h-full relative font-inherit transition-all duration-500 hover:text-logo-light-blue group whitespace-nowrap"
-          >
-            Dev Portfolio
-            <span className="absolute bottom-[0.3em] left-0 w-0 h-[0.15em] bg-gradient-to-r from-logo-light-blue to-logo-dark rounded-[30px] transition-all duration-500 group-hover:w-full group-focus:w-full group-focus:transition-none"></span>
-          </button>
-          <button
             onClick={() => dispatch(setCurrentPage("auditPortfolio"))}
             className="bg-transparent border-none text-black h-full relative font-inherit transition-all duration-500 hover:text-logo-light-blue group whitespace-nowrap"
           >
             Audit Portfolio
+            <span className="absolute bottom-[0.3em] left-0 w-0 h-[0.15em] bg-gradient-to-r from-logo-light-blue to-logo-dark rounded-[30px] transition-all duration-500 group-hover:w-full group-focus:w-full group-focus:transition-none"></span>
+          </button>
+          <button
+            onClick={() => dispatch(setCurrentPage("portfolio"))}
+            className="bg-transparent border-none text-black h-full relative font-inherit transition-all duration-500 hover:text-logo-light-blue group whitespace-nowrap"
+          >
+            Dev Portfolio
             <span className="absolute bottom-[0.3em] left-0 w-0 h-[0.15em] bg-gradient-to-r from-logo-light-blue to-logo-dark rounded-[30px] transition-all duration-500 group-hover:w-full group-focus:w-full group-focus:transition-none"></span>
           </button>
           <button

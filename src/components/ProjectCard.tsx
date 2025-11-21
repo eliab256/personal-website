@@ -14,22 +14,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projectProp }) => {
     <div
       onClick={() => dispatch(setSelectedProject(name))}
       role="button"
-      className="flex flex-col justify-between items-center border border-white md:border-2 lg:border-[3px] rounded-[60px] w-full md:w-[42%] lg:w-[18%] aspect-square m-2.5 bg-white/60 text-black cursor-pointer p-[0.3%] hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-2xl"
+      className="group relative flex flex-col justify-between items-center border border-white/30 rounded-3xl w-full md:w-[42%] lg:w-[18%] aspect-square m-2.5 bg-white/10 backdrop-blur-sm text-white cursor-pointer p-6 hover:scale-[1.02] hover:bg-white/20 transition-all duration-500 shadow-xl hover:shadow-2xl hover:border-white/60"
     >
-      <div className="aspect-square flex items-center justify-center w-4/5 h-[65%] mx-auto flex-1 p-[2%] relative overflow-hidden">
-        <img src={image} alt={name} className="max-w-full max-h-full object-contain w-full h-full" />
+      <div className="w-full h-[60%] flex items-center justify-center mb-4 overflow-hidden rounded-2xl bg-white/30 p-4">
+        <img src={image} alt={name} className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110" />
       </div>
-      <div className="flex justify-center text-center items-center w-full z-[2] h-[20%] mb-6">
-        <h3 className="text-black">{name}</h3>
-      </div>
-      <div className="h-[13%] flex flex-col justify-center items-center w-full">
-        <h4 className="text-black">{projectType}</h4>
-        <div className="flex flex-row gap-2.5 justify-center items-center flex-wrap mb-4">
-          {programmingLanguage.map((lang, index) => (
-            <h4 key={index} className="text-black">
-              {lang}
-            </h4>
-          ))}
+      <div className="flex-1 flex flex-col justify-between items-center w-full">
+        <h3 className="text-white text-center mb-3 font-normal text-lg md:text-xl lg:text-2xl">{name}</h3>
+        <div className="flex flex-col gap-2 items-center w-full">
+          <span className="text-xs md:text-sm text-white/70 uppercase tracking-wider">{projectType}</span>
+          <div className="flex flex-row gap-2 justify-center items-center flex-wrap">
+            {programmingLanguage.map((lang, index) => (
+              <span key={index} className="px-3 py-1 bg-white/10 border border-white/30 rounded-full text-xs md:text-sm text-white backdrop-blur-sm">
+                {lang}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -32,7 +32,7 @@ const ProjectSummary: React.FC<ProjectSummaryProps> = ({ selectedProjectProp }) 
 
   return (
     <>
-      <div className="fixed top-[42px] md:top-[55px] lg:top-[85px] bottom-0 z-50 flex justify-center flex-col items-center rounded-2xl bg-white/95 backdrop-blur-sm p-1 mx-auto border border-gray-300 shadow-lg overflow-y-auto cursor-default w-[90%] sm:w-[90%] md:w-[80%] lg:w-[60%] lg:p-12">
+      <div className="fixed top-[42px] md:top-[55px] lg:top-[85px] bottom-[25px] md:bottom-[40px] lg:bottom-[65px] z-50 flex justify-center flex-col items-center rounded-2xl bg-white/95 backdrop-blur-sm p-1 mx-auto border border-gray-300 shadow-lg overflow-y-auto cursor-default w-[90%] sm:w-[90%] md:w-[80%] lg:w-[60%] lg:p-12">
         {/* Close Button */}
         <div
           className="absolute top-4 right-4 bg-red-500 rounded-[40px] transition-transform duration-150 shadow-md p-2 cursor-pointer active:scale-95 active:bg-red-600 hover:bg-red-600"

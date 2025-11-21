@@ -95,7 +95,7 @@
   }
 
   .title {
-    @apply flex items-center justify-center text-center h-auto py-[10px] flex-none w-4/5 mx-auto;
+    @apply flex items-center justify-center text-center h-auto py-[10px] flex-none w-full;
   }
 
   .body-no-scroll {

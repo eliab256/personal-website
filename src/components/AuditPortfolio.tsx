@@ -4,7 +4,7 @@ import { type ProjectName } from "../redux/selectedProjectSlice";
 import AuditCard from "./AuditCard";
 import auditCardData from "../data/AuditCardData";
 import { schools } from "../types/projectTypes";
-import ProjectSummary from "./ProjectSummary";
+import AuditSummary from "./AuditSummary";
 
 const AuditPortfolio: React.FC = () => {
   const currentProjectSelected = useSelector((state: { selectedProject: { name: ProjectName } }) => state.selectedProject.name);
@@ -23,10 +23,10 @@ const AuditPortfolio: React.FC = () => {
 
   return (
     <div className="flex flex-col justify-center items-center w-full">
-      <div className="title">
+      <div className="title text-center">
         <h1>Audit Portfolio</h1>
       </div>
-      <div className="flex flex-col flex-1 mt-5 w-full">
+      <div className="flex flex-col flex-1 mt-3 w-full">
         {schools.map((platform) => {
           const projectsForPlatform = auditCardData.filter((project) => project.platform === platform);
 
@@ -35,7 +35,7 @@ const AuditPortfolio: React.FC = () => {
           }
 
           return (
-            <div className="flex flex-col items-stretch w-full pb-6" key={platform}>
+            <div className="flex flex-col items-stretch w-full pb-4" key={platform}>
               <div className="flex items-center justify-center h-auto border-b-2 border-white border-dashed mx-[10%]">
                 <h2 className="text-center">{platform}</h2>
               </div>
@@ -50,7 +50,7 @@ const AuditPortfolio: React.FC = () => {
       </div>
       {currentProjectSelected !== null && (
         <>
-          <ProjectSummary selectedProjectProp={selectedProject!} />
+          <AuditSummary selectedAuditProp={selectedProject!} />
         </>
       )}
     </div>
