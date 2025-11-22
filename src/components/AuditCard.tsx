@@ -33,9 +33,9 @@ const AuditCard: React.FC<AuditCardProps> = ({ auditProp }) => {
           </div>
           {findingsCount && (
             <div className="flex gap-2 mt-2">
-              <span className="px-2 py-0.5 bg-green-500/20 border border-green-500/40 rounded text-xs text-green-300">L:{findingsCount[0]}</span>
+              <span className="px-2 py-0.5 bg-red-500/20 border border-red-500/40 rounded text-xs text-red-300">H:{findingsCount[0]}</span>
               <span className="px-2 py-0.5 bg-yellow-500/20 border border-yellow-500/40 rounded text-xs text-yellow-300">M:{findingsCount[1]}</span>
-              <span className="px-2 py-0.5 bg-red-500/20 border border-red-500/40 rounded text-xs text-red-300">H:{findingsCount[2]}</span>
+              <span className="px-2 py-0.5 bg-green-500/20 border border-green-500/40 rounded text-xs text-green-300">L:{findingsCount[2]}</span>
             </div>
           )}
         </div>

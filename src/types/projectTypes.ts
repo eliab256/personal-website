@@ -8,16 +8,16 @@ export type ProgrammingLanguagesType = "solidity" | "assembly" | "typescript" | 
 export const programmingLanguages: ProgrammingLanguagesType[] = ["solidity", "assembly", "typescript", "HTML and CSS", "javascript", "react", "cairo"];
 
 export interface ProjectCardData {
-    name: string;
-    image: string;
-    school: SchoolType;
-    description: string;
-    projectType: ProjectType;
-    programmingLanguage: ProgrammingLanguagesType[];
-    gitHubLink: string;
-    etherscanLink?: string | string[];
-    websiteLink?: string;
-    presentationDownloadLink: string;
+  name: string;
+  image: string;
+  school: SchoolType;
+  description: string;
+  projectType: ProjectType;
+  programmingLanguage: ProgrammingLanguagesType[];
+  gitHubLink: string;
+  etherscanLink?: string | string[];
+  websiteLink?: string;
+  presentationDownloadLink: string;
 }
 
 export type PlatformType = "damn vulnerable defi" | "code4rena" | "sherlock" | "cantinao" | "immunefi" | "cyfrin CodeHawks";
@@ -30,15 +30,15 @@ export type DevelopmentFrameworkType = "hardhat" | "foundry" | "brownie";
 export const developmentFrameworks: DevelopmentFrameworkType[] = ["hardhat", "foundry", "brownie"];
 
 export interface AuditCardData {
-    name: string;
-    image: string;
-    platform: PlatformType;
-    description: string;
-    projectClass: ProjectClass;
-    programmingLanguage: ProgrammingLanguagesType[];
-    developmentFramework: DevelopmentFrameworkType;
-    findingsCount?: [number, number, number];
-    gitHubLink: string;
-    presentationDownloadLink: string;
-    platformLink?: string;
+  name: string;
+  image: string;
+  platform: PlatformType;
+  description: string;
+  projectClass: ProjectClass;
+  programmingLanguage: ProgrammingLanguagesType[];
+  developmentFramework: DevelopmentFrameworkType;
+  findingsCount?: [number, number, number]; //high , medium , low
+  gitHubLink: string;
+  presentationDownloadLink: string;
+  platformLink?: string;
 }

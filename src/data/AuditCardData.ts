@@ -9,10 +9,14 @@ import DVD4 from "../assets/img/DamnVulnerableDefiImgs/DVD4.png";
 //import DVD8 from "../assets/img/DamnVulnerableDefiImgs/DVD8.png";
 //import DVD9 from "../assets/img/DamnVulnerableDefiImgs/DVD9.png";
 
-// Import PDF files
-import UnstoppablePDF from "../PDF/UnstoppableReport.pdf";
-import TrusterPDF from "../PDF/TrusterReport.pdf";
-import SideEntrancePDF from "../PDF/SideEntranceReport.pdf";
+import RaiseBoxFaucetImg from "../assets/img/CodeHawksImgs/RaiseBoxFaucet.png";
+
+// Import PDF damn vul defi files
+import UnstoppablePDF from "../assets/PDF/DamnVulnerableDefi/UnstoppableReport.pdf";
+import TrusterPDF from "../assets/PDF/DamnVulnerableDefi/TrusterReport.pdf";
+import SideEntrancePDF from "../assets/PDF/DamnVulnerableDefi/SideEntranceReport.pdf";
+// Import CodeHawks PDF files
+import RaiseBoxFaucetAuditPDF from "../assets/PDF/CodeHawks/RaiseBoxFaucetAudit.pdf";
 
 const auditCardData: AuditCardData[] = [
   //Damn Vulnerable DeFi
@@ -54,6 +58,20 @@ const auditCardData: AuditCardData[] = [
   },
 
   //first flight cyfrin codehawks
+  {
+    name: "RaiseBox Faucet",
+    image: RaiseBoxFaucetImg,
+    platform: "cyfrin CodeHawks",
+    description:
+      "RaiseBox Faucet is a token drip faucet that drips 1000 test tokens to users every 3 days. It also drips 0.005 sepolia eth to first time users. The faucet tokens will be useful for testing the testnet of a future protocol that would only allow interactions using this tokens.",
+    projectClass: "DeFi",
+    programmingLanguage: ["solidity"],
+    developmentFramework: "foundry",
+    findingsCount: [3, 1, 0],
+    gitHubLink: "https://github.com/eliab256/codeHawks-2025-10-raisebox-faucet.git",
+    presentationDownloadLink: RaiseBoxFaucetAuditPDF,
+    platformLink: "https://codehawks.cyfrin.io/c/2025-10-raisebox-faucet",
+  },
 ];
 
 export default auditCardData;
