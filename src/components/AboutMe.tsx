@@ -171,6 +171,78 @@ const AboutMe: React.FC = () => {
             .
           </p>
         </div>
+
+        {/* Technical Stack */}
+        <div className="flex flex-col justify-center items-center w-full mt-8">
+          <h4 className="text-white text-center py-2.5">Technical Stack</h4>
+
+          {/* Current Skills */}
+          <div className="w-full mt-4 px-4">
+            <h5 className="text-white text-center mb-4 text-sm uppercase tracking-wider opacity-80">Current Skills</h5>
+
+            {/* Solidity */}
+            <div className="mb-4">
+              <h6 className="text-white font-semibold mb-1">Solidity – Advanced</h6>
+              <p className="text-white text-sm opacity-80">
+                Inheritance, Standard Tokens (ERC20, ERC721, ERC1155), Interfaces, Encode/Decode (abi.encode, abi.encodePacked, abi.decode), Proxy patterns,
+                Factory patterns, Multisig patterns, <span className="font-medium">OpenZeppelin Libraries</span>, Checks-Effects-Interactions (C-E-I)
+              </p>
+            </div>
+
+            {/* TypeScript/JavaScript */}
+            <div className="mb-4">
+              <h6 className="text-white font-semibold mb-1">TypeScript / JavaScript – Intermediate</h6>
+              <p className="text-white text-sm opacity-80">Interfaces, Types, Async Functions (async/await, Promises), Ethers.js / Web3.js integration</p>
+            </div>
+
+            {/* EVM */}
+            <div className="mb-4">
+              <h6 className="text-white font-semibold mb-1">EVM – Advanced</h6>
+              <p className="text-white text-sm opacity-80">
+                Storage Slots, Atomicity, Function Selectors, Low-level Call Mechanisms, Gas optimization, Hashing & Signatures, Off-chain signing,{" "}
+                <span className="font-medium">Reentrancy Protection</span>, <span className="font-medium">MEV awareness</span>
+              </p>
+            </div>
+
+            {/* Foundry */}
+            <div className="mb-4">
+              <h6 className="text-white font-semibold mb-1">Foundry – Advanced</h6>
+              <p className="text-white text-sm opacity-80">
+                Unit Tests, Fuzz Testing, Cheatcodes + Anvil, Local Fork, Dynamic Local Fork, Deploy Scripts, Property-based testing, Coverage & Gas profiling
+              </p>
+            </div>
+
+            {/* Hardhat */}
+            <div className="mb-4">
+              <h6 className="text-white font-semibold mb-1">Hardhat – Intermediate</h6>
+              <p className="text-white text-sm opacity-80">Ethers.js Integration, Testing Suite, Contract Deployment, Forking mainnet for integration tests</p>
+            </div>
+
+            {/* DeFi Protocols */}
+            <div className="mb-4">
+              <h6 className="text-white font-semibold mb-1">DeFi Protocols – Intermediate</h6>
+              <p className="text-white text-sm opacity-80">
+                ERC4626 Vaults, AMM (Automated Market Makers), Concentrated Liquidity, Liquidity Pools, Pool Shares, DeFi Math, Uniswap V2/V3/V4, Aave,{" "}
+                <span className="font-medium">Flash Loans</span>, <span className="font-medium">Flash Loan Attacks</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Future Learning */}
+          <div className="w-full mt-6 px-4">
+            <h5 className="text-white text-center mb-4 text-sm uppercase tracking-wider opacity-80">Future Learning Path</h5>
+
+            <div className="mb-3">
+              <h6 className="text-white font-semibold mb-1">Cairo</h6>
+              <p className="text-white text-sm opacity-80">Planned - StarkNet smart contract language</p>
+            </div>
+
+            <div className="mb-3">
+              <h6 className="text-white font-semibold mb-1">StarkNet Auditing</h6>
+              <p className="text-white text-sm opacity-80">Planned - Security auditing for StarkNet ecosystem</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

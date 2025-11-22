@@ -10,6 +10,19 @@ const AuditPortfolio: React.FC = () => {
   const currentProjectSelected = useSelector((state: { selectedProject: { name: ProjectName } }) => state.selectedProject.name);
   const selectedProject = auditCardData.find((ex) => ex.name === currentProjectSelected);
 
+  // Calcola il totale globale di tutte le vulnerabilità
+  const globalTotalFindings = auditCardData.reduce(
+    (acc, project) => {
+      if (project.findingsCount) {
+        acc.high += project.findingsCount[0];
+        acc.medium += project.findingsCount[1];
+        acc.low += project.findingsCount[2];
+      }
+      return acc;
+    },
+    { high: 0, medium: 0, low: 0 }
+  );
+
   useEffect(() => {
     if (currentProjectSelected !== null) {
       document.body.classList.add("bodyNoScroll");
@@ -25,6 +38,12 @@ const AuditPortfolio: React.FC = () => {
     <div className="flex flex-col justify-center items-center w-full">
       <div className="title text-center">
         <h1>Audit Portfolio</h1>
+      </div>
+      <div className="flex gap-2 items-center justify-center mt-2">
+        <span className="text-white text-xs uppercase tracking-wider opacity-70">Total Findings:</span>
+        <span className="px-2 py-0.5 bg-red-500/20 border border-red-500/40 rounded text-xs text-red-300">H:{globalTotalFindings.high}</span>
+        <span className="px-2 py-0.5 bg-yellow-500/20 border border-yellow-500/40 rounded text-xs text-yellow-300">M:{globalTotalFindings.medium}</span>
+        <span className="px-2 py-0.5 bg-green-500/20 border border-green-500/40 rounded text-xs text-green-300">L:{globalTotalFindings.low}</span>
       </div>
       <div className="flex flex-col flex-1 mt-3 w-full">
         {platforms.map((platform) => {

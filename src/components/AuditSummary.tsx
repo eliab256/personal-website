@@ -83,13 +83,13 @@ const AuditSummary: React.FC<AuditSummaryProps> = ({ selectedAuditProp }) => {
         {findingsCount && findingsCount.some((count) => count > 0) && (
           <div className="flex flex-wrap gap-2 justify-center mb-2 md:mb-3">
             {findingsCount[0] > 0 && (
-              <div className="px-2 py-0.5 bg-green-500/20 border border-green-500/40 rounded text-xs text-green-700">Low: {findingsCount[0]}</div>
+              <div className="px-2 py-0.5 bg-red-500/20 border border-red-500/40 rounded text-xs text-red-700">High: {findingsCount[0]}</div>
             )}
             {findingsCount[1] > 0 && (
               <div className="px-2 py-0.5 bg-yellow-500/20 border border-yellow-500/40 rounded text-xs text-yellow-700">Medium: {findingsCount[1]}</div>
             )}
             {findingsCount[2] > 0 && (
-              <div className="px-2 py-0.5 bg-red-500/20 border border-red-500/40 rounded text-xs text-red-700">High: {findingsCount[2]}</div>
+              <div className="px-2 py-0.5 bg-green-500/20 border border-green-500/40 rounded text-xs text-green-700">Low: {findingsCount[2]}</div>
             )}
           </div>
         )}

@@ -20,8 +20,8 @@ export interface ProjectCardData {
   presentationDownloadLink: string;
 }
 
-export type PlatformType = "damn vulnerable defi" | "code4rena" | "sherlock" | "cantinao" | "immunefi" | "cyfrin CodeHawks";
-export const platforms: PlatformType[] = ["damn vulnerable defi", "code4rena", "sherlock", "cantinao", "immunefi", "cyfrin CodeHawks"];
+export type PlatformType = "damn vulnerable defi" | "code4rena" | "sherlock" | "cantinao" | "immunefi" | "Cyfrin CodeHawks";
+export const platforms: PlatformType[] = ["damn vulnerable defi", "code4rena", "sherlock", "cantinao", "immunefi", "Cyfrin CodeHawks"];
 
 export type ProjectClass = "DeFi" | "NFT" | "DAO" | "Bridge" | "RWA";
 export const projectClasses: ProjectClass[] = ["DeFi", "NFT", "DAO", "Bridge", "RWA"];

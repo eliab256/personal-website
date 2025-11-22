@@ -57,11 +57,11 @@ const auditCardData: AuditCardData[] = [
     presentationDownloadLink: SideEntrancePDF,
   },
 
-  //first flight cyfrin codehawks
+  //first flight Cyfrin CodeHawks
   {
     name: "RaiseBox Faucet",
     image: RaiseBoxFaucetImg,
-    platform: "cyfrin CodeHawks",
+    platform: "Cyfrin CodeHawks",
     description:
       "RaiseBox Faucet is a token drip faucet that drips 1000 test tokens to users every 3 days. It also drips 0.005 sepolia eth to first time users. The faucet tokens will be useful for testing the testnet of a future protocol that would only allow interactions using this tokens.",
     projectClass: "DeFi",
