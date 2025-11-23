@@ -51,14 +51,14 @@ const Home: React.FC = () => {
           </p>
 
           {/* Project and Audit Counters */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mt-8 w-full">
+          <div className="flex flex-row md:flex-row items-center justify-center gap-6 md:gap-16 mt-8 w-full">
             <div className="flex flex-col items-center">
-              <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2">{displayedProjects}</div>
-              <div className="text-lg md:text-xl lg:text-2xl text-white">Projects Developed</div>
+              <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-2">{displayedProjects}</div>
+              <div className="text-sm md:text-xl lg:text-2xl text-white text-center">Projects Developed</div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2">{displayedAudits}</div>
-              <div className="text-lg md:text-xl lg:text-2xl text-white">Audits Completed</div>
+              <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-2">{displayedAudits}</div>
+              <div className="text-sm md:text-xl lg:text-2xl text-white text-center">Audits Completed</div>
             </div>
           </div>
         </div>

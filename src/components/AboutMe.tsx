@@ -1,14 +1,31 @@
 const AboutMe: React.FC = () => {
+  // Calculate age dynamically
+  const calculateAge = () => {
+    const birthDate = new Date(1996, 10, 30); // Month is 0-indexed, so 10 = November
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    // If birthday hasn't occurred yet this year, subtract 1
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+
+    return age;
+  };
+
+  const age = calculateAge();
+
   return (
-    <div className="flex justify-center flex-row flex-wrap w-full">
+    <div className="flex justify-center flex-row flex-wrap w-full px-4 md:px-6 lg:px-0">
       {/* Left Column: Who I Am + Professional Experiences */}
       <div className="flex flex-col items-center w-full mb-8 lg:w-1/2 lg:border-r-2 lg:border-white lg:border-dashed lg:pr-8 lg:mb-0 lg:pb-8">
         <div className="title">
           <h1>Who I am</h1>
         </div>
-        <div className="flex flex-col justify-center items-center w-full mt-2.5">
+        <div className="flex flex-col justify-center items-center w-full mt-2.5 px-2 md:px-4 lg:px-0">
           <p className="text-white">
-            Hi, I'm Elia, and at 27 years old I decided to rewrite my path.
+            Hi, I'm Elia, and at {age} years old I decided to rewrite my path.
             <br />
             <br />
             For years I followed very different paths: agricultural studies, music, work as an electrician. All experiences that gave me discipline,
