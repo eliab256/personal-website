@@ -1,3 +1,5 @@
+import IProfileIta from "../assets/img/I-Profile Ita.png";
+
 const AboutMe: React.FC = () => {
   // Calculate age dynamically
   const calculateAge = () => {
@@ -182,7 +184,7 @@ const AboutMe: React.FC = () => {
         <div className="flex flex-col justify-center items-center w-full mt-4">
           <p className="text-white">
             Here you can see an in-depth description of my softskills. Every value above 30 can be considered immutable. Watch the full report{" "}
-            <a href="i-Profile.html" rel="noopener" target="_blank" className="text-white hover:underline">
+            <a href={IProfileIta} rel="noopener noreferrer" target="_blank" className="text-white hover:underline">
               here
             </a>
             .
