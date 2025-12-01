@@ -10,6 +10,7 @@ import DVD4 from "../assets/img/DamnVulnerableDefiImgs/DVD4.png";
 //import DVD9 from "../assets/img/DamnVulnerableDefiImgs/DVD9.png";
 
 import RaiseBoxFaucetImg from "../assets/img/CodeHawksImgs/RaiseBoxFaucet.png";
+import BriVaultImg from "../assets/img/CodeHawksImgs/BriVault.png";
 
 // Import PDF damn vul defi files
 import UnstoppablePDF from "../assets/PDF/DamnVulnerableDefi/UnstoppableReport.pdf";
@@ -17,6 +18,7 @@ import TrusterPDF from "../assets/PDF/DamnVulnerableDefi/TrusterReport.pdf";
 import SideEntrancePDF from "../assets/PDF/DamnVulnerableDefi/SideEntranceReport.pdf";
 // Import CodeHawks PDF files
 import RaiseBoxFaucetAuditPDF from "../assets/PDF/CodeHawks/RaiseBoxFaucetAudit.pdf";
+import BriVaultAuditPDF from "../assets/PDF/CodeHawks/BriVaultAudit.pdf";
 
 const auditCardData: AuditCardData[] = [
   //Damn Vulnerable DeFi
@@ -71,6 +73,20 @@ const auditCardData: AuditCardData[] = [
     gitHubLink: "https://github.com/eliab256/codeHawks-2025-10-raisebox-faucet.git",
     presentationDownloadLink: RaiseBoxFaucetAuditPDF,
     platformLink: "https://codehawks.cyfrin.io/c/2025-10-raisebox-faucet",
+  },
+  {
+    name: "BriVault",
+    image: BriVaultImg,
+    platform: "Cyfrin CodeHawks",
+    description:
+      "This smart contract implements a tournament betting vault using the ERC4626 tokenized vault standard. It allows users to deposit an ERC20 asset to bet on a team, and at the end of the tournament, winners share the pool based on the value of their deposits.",
+    projectClass: "DeFi",
+    programmingLanguage: ["solidity"],
+    developmentFramework: "foundry",
+    findingsCount: [2, 0, 0],
+    gitHubLink: "https://github.com/eliab256/code-hawks-2025-11-brivault.git",
+    presentationDownloadLink: BriVaultAuditPDF,
+    platformLink: "https://codehawks.cyfrin.io/c/2025-11-brivault",
   },
 ];
 
