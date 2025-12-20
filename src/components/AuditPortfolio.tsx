@@ -39,13 +39,13 @@ const AuditPortfolio: React.FC = () => {
       <div className="title text-center">
         <h1>Audit Portfolio</h1>
       </div>
-      <div className="flex gap-2 items-center justify-center mt-2">
+      <div className="flex gap-2 items-center justify-center mt-0.5">
         <span className="text-white text-xs uppercase tracking-wider opacity-70">Total Findings:</span>
         <span className="px-2 py-0.5 bg-red-500/20 border border-red-500/40 rounded text-xs text-red-300">H:{globalTotalFindings.high}</span>
         <span className="px-2 py-0.5 bg-yellow-500/20 border border-yellow-500/40 rounded text-xs text-yellow-300">M:{globalTotalFindings.medium}</span>
         <span className="px-2 py-0.5 bg-green-500/20 border border-green-500/40 rounded text-xs text-green-300">L:{globalTotalFindings.low}</span>
       </div>
-      <div className="flex flex-col flex-1 mt-3 w-full">
+      <div className="flex flex-col flex-1 mt-0.5 w-full">
         {platforms.map((platform) => {
           const projectsForPlatform = auditCardData.filter((project) => project.platform === platform);
 

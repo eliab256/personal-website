@@ -4,12 +4,13 @@ import logoImage from "../assets/img/PersonalLogos/personalLogoWithNoBackgroundT
 import linkedinImage from "../assets/img/LinkedinLogo.png";
 import gitHubImage from "../assets/img/githubMark.png";
 import s2iLogo from "../assets/img/S2ILogo.png";
+import xLogo from "../assets/img/x_Logo_Black.png";
 
 const Header: React.FC = () => {
   const dispatch = useDispatch();
   return (
-    <header className="w-full h-[80px] md:h-[50px] lg:h-[80px] border-b-2 md:border-b-4 lg:border-b-4 border-logo-dark bg-white fixed top-0 left-0 right-0 z-[100] flex justify-center shadow-lg">
-      <div className="h-full flex flex-col md:flex-row justify-between items-center w-full max-w-full px-4 py-1 md:py-0">
+    <header className="w-full h-[80px] md:h-[50px] lg:h-[60px] xl:h-[80px] border-b-2 md:border-b-4 lg:border-b-4 border-logo-dark bg-white fixed top-0 left-0 right-0 z-[100] flex justify-center shadow-lg">
+      <div className="h-full flex flex-col md:flex-row justify-between items-center w-full max-w-full px-4 md:px-1 py-1 md:py-0">
         {/* First Row on Mobile: Logo and Social Links */}
         <div className="flex md:hidden w-full justify-between items-center h-[35px]">
           {/* Logo Section Mobile */}
@@ -42,6 +43,14 @@ const Header: React.FC = () => {
               <img src={gitHubImage} alt="github link" className="h-full" />
             </a>
             <a
+              href="https://x.com/Elia_Bordoni"
+              rel="noopener"
+              target="_blank"
+              className="h-full transition-transform duration-200 hover:scale-110 active:scale-95"
+            >
+              <img src={xLogo} alt="X (Twitter) link" className="h-full" />
+            </a>
+            <a
               href="https://talent.start2impact.it/profile/elia-bordoni-856a171d-db43-4743-a606-e3bb8d631f35"
               rel="noopener"
               target="_blank"
@@ -53,7 +62,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Logo Section Desktop */}
-        <div className="hidden md:flex h-[35px] lg:h-[55px] items-center text-[13px] md:text-[15px] lg:text-[25px] justify-center flex-1">
+        <div className="hidden md:flex h-[35px] lg:h-[45px] xl:h-[55px] items-center text-[13px] md:text-[15px] lg:text-[25px] justify-center flex-1">
           <div
             className="flex justify-center h-full cursor-pointer transition-transform duration-200 hover:scale-105 active:scale-95"
             onClick={() => dispatch(setCurrentPage("home"))}
@@ -64,7 +73,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Menu Section - Second Row on Mobile, Center on Desktop */}
-        <div className="flex h-[35px] md:h-[35px] lg:h-[55px] items-center justify-center text-[11px] md:text-[15px] lg:text-[25px] gap-[2%] md:gap-[1.5%] lg:gap-[3%] flex-[2] w-full md:w-auto">
+        <div className="flex h-[35px] md:h-[35px] lg:h-[45px] xl:h-[55px] items-center justify-center text-[11px] md:text-[15px] lg:text-[18px] xl:text-[25px] gap-[2%] md:gap-[1.5%] lg:gap-[3%] flex-[2] w-full md:w-auto">
           <button
             onClick={() => dispatch(setCurrentPage("aboutMe"))}
             className="bg-transparent border-none text-black h-full relative font-inherit transition-all duration-500 hover:text-logo-light-blue group whitespace-nowrap px-1"
@@ -119,6 +128,14 @@ const Header: React.FC = () => {
             className="h-full transition-transform duration-200 hover:scale-110 active:scale-95"
           >
             <img src={gitHubImage} alt="github link" className="h-full" />
+          </a>
+          <a
+            href="https://x.com/Elia_Bordoni"
+            rel="noopener"
+            target="_blank"
+            className="h-full transition-transform duration-200 hover:scale-110 active:scale-95"
+          >
+            <img src={xLogo} alt="X (Twitter) link" className="h-full" />
           </a>
           <a
             href="https://talent.start2impact.it/profile/elia-bordoni-856a171d-db43-4743-a606-e3bb8d631f35"

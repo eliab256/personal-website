@@ -14,7 +14,7 @@ const AuditCard: React.FC<AuditCardProps> = ({ auditProp }) => {
     <div
       onClick={() => dispatch(setSelectedProject(name))}
       role="button"
-      className="group relative flex flex-col justify-between items-center border border-white/30 rounded-3xl w-full md:w-[42%] lg:w-[18%] aspect-square m-2.5 bg-white/10 backdrop-blur-sm text-white cursor-pointer p-6 hover:scale-[1.02] hover:bg-white/20 transition-all duration-500 shadow-xl hover:shadow-2xl hover:border-white/60"
+      className="group relative flex flex-col justify-between items-center border border-white/30 rounded-3xl w-[70%] md:w-[42%] lg:w-[18%] aspect-square m-2.5 bg-white/10 backdrop-blur-sm text-white cursor-pointer p-4 md:p-6 hover:scale-[1.02] hover:bg-white/20 transition-all duration-500 shadow-xl hover:shadow-2xl hover:border-white/60"
     >
       <div className="w-full h-[55%] flex items-center justify-center mb-3 overflow-hidden rounded-2xl bg-white/5 p-4">
         <img src={image} alt={name} className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110" />
