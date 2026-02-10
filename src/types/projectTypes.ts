@@ -12,7 +12,7 @@ export interface ProjectCardData {
   image: string;
   school: SchoolType;
   description: string;
-  projectType: ProjectType;
+  projectType: ProjectType | ProjectType[];
   programmingLanguage: ProgrammingLanguagesType[];
   gitHubLink: string;
   etherscanLink?: string | string[];

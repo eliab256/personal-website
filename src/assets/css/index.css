@@ -66,6 +66,7 @@
 
   p {
     @apply text-[13px] md:text-[20px] lg:text-[22px] mt-[10px] md:mt-[15px] lg:mt-[15px] mb-[15px] md:mb-[20px] lg:mb-[20px] text-justify text-white;
+    line-height: 1.1;
   }
 
   button {

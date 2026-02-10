@@ -22,7 +22,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projectProp }) => {
       <div className="flex-1 flex flex-col justify-between items-center w-full">
         <h3 className="text-white text-center mb-3 font-normal text-lg md:text-xl lg:text-2xl">{name}</h3>
         <div className="flex flex-col gap-2 items-center w-full">
-          <span className="text-xs md:text-sm text-white/70 uppercase tracking-wider">{projectType}</span>
+          <div className="flex flex-row gap-2 justify-center items-center flex-wrap">
+            {(Array.isArray(projectType) ? projectType : [projectType]).map((type, index) => (
+              <span key={index} className="text-xs md:text-sm text-white/70 uppercase tracking-wider">
+                {type}
+              </span>
+            ))}
+          </div>
           <div className="flex flex-row gap-2 justify-center items-center flex-wrap">
             {programmingLanguage.map((lang, index) => (
               <span key={index} className="px-3 py-1 bg-white/10 border border-white/30 rounded-full text-xs md:text-sm text-white backdrop-blur-sm">

@@ -9,15 +9,7 @@ import ReactAndTypescriptAndWeb3 from "../assets/img/logosPorgrammingLanguage/Ty
 import SolidityBasic from "../assets/img/logosPorgrammingLanguage/Solidity.png";
 import HardhatProject from "../assets/img/logosPorgrammingLanguage/Hardhat.png";
 import FoundryProject from "../assets/img/logosPorgrammingLanguage/Foundry.png";
-// import DVD1 from "../assets/img/DamnVulnerableDefiImgs/DVD1.png";
-// //import DVD2 from "../assets/img/DamnVulnerableDefiImgs/DVD2.png";
-// import DVD3 from "../assets/img/DamnVulnerableDefiImgs/DVD3.png";
-// import DVD4 from "../assets/img/DamnVulnerableDefiImgs/DVD4.png";
-// //import DVD5 from "../assets/img/DamnVulnerableDefiImgs/DVD5.png";
-// //import DVD6 from "../assets/img/DamnVulnerableDefiImgs/DVD6.png";
-// //import DVD7 from "../assets/img/DamnVulnerableDefiImgs/DVD7.png";
-// //import DVD8 from "../assets/img/DamnVulnerableDefiImgs/DVD8.png";
-// //import DVD9 from "../assets/img/DamnVulnerableDefiImgs/DVD9.png";
+import S2IFinalProject from "../assets/img/Yoyo-Logo-No-Scritta.png";
 
 const projectCardData: ProjectCardData[] = [
   //START2Impact
@@ -130,7 +122,7 @@ const projectCardData: ProjectCardData[] = [
     image: HardhatProject,
     school: "start2impact",
     description:
-      "Moove, a leading company in shared micro-mobility across several European cities, wants to give its users a stronger voice and actively involve them in company decisions. To achieve this, we are creating a DAO, a Decentralized Autonomous Organization, which allows users to participate directly in the governance of the platform. The governance model can be set up in two ways: with direct democracy, where each member votes on every decision, or with liquid democracy, which allows members to vote directly or delegate their vote to someone else, providing flexibility and representative decision-making. Through the governance smart contract, users can become members of the DAO by purchasing shares in exchange for ERC-20 tokens at a fixed price. Administrators will have the ability to close the token sale, finalizing the initial phase. Members will be able to propose decisions to be voted on, and each vote will be weighted according to the number of shares held. Decisions that achieve a majority of weighted votes will be approved, and all proposals and voting activity will be recorded on the contract to ensure transparency. Members will be able to vote for, against, or optionally abstain from a decision. Certain decisions may also involve transferring ERC-20 tokens from the DAO to an external Ethereum address. Finally, the contract will be thoroughly tested using Hardhat to ensure security, reliability, and proper functionality.",
+      "Moove, a micro-mobility company, wants to give its users a stronger voice and actively involve them in company decisions. To achieve this, we are creating a DAO which allows users to participate directly in the governance of the platform. The governance model can be set up in two ways: with direct democracy, where each member votes on every decision, or with liquid democracy, which allows members to vote directly or delegate their vote to someone else, providing flexibility and representative decision-making. Through the governance smart contract, users can become members of the DAO by purchasing shares in exchange for ERC-20 tokens. Administrators will have the ability to close the token sale, finalizing the initial phase. Members will be able to propose decisions to be voted on, and each vote will be weighted according to the number of shares held. Decisions that achieve a majority of weighted votes will be approved, and all proposals and voting activity will be recorded on the contract to ensure transparency. Members will be able to vote for, against, or optionally abstain from a decision. The contract will be thoroughly tested using Hardhat.",
     projectType: "blockchain",
     programmingLanguage: ["solidity", "typescript"],
     gitHubLink: "https://github.com/eliab256/Progetto-Solidity-Advanced-Di-Elia-Bordoni.git",
@@ -151,43 +143,23 @@ const projectCardData: ProjectCardData[] = [
     presentationDownloadLink:
       "https://www.dropbox.com/scl/fi/mt54w5gw63nnjwp7eu4kk/Elia-Bordoni-s-Ethereum-Advanced-Project.pdf?rlkey=w3j9u6q7j5ne9m70sngwfazo3&st=b0z3rof0&dl=1",
   },
-  //DAMN VULNERABLE DEFI
-  // {
-  //     name: "Unstoppable",
-  //     image: DVD1,
-  //     school: "damn vulnerable defi",
-  //     description:
-  //         "There’s a tokenized vault with a million DVT tokens deposited. It’s offering flash loans for free, until the grace period ends. To catch any bugs before going 100% permissionless, the developers decided to run a live beta in testnet. There’s a monitoring contract to check liveness of the flashloan feature. Starting with 10 DVT tokens in balance, show that it’s possible to halt the vault. It must stop offering flash loans.",
-  //     projectType: "blockchain",
-  //     programmingLanguage: ["solidity"],
-  //     gitHubLink: "https://github.com/eliab256/damn-vulnerable-defi-project.git",
-  //     presentationDownloadLink:
-  //         "https://www.dropbox.com/scl/fi/2py0mq1l3nqncqthslzg5/Unstoppable-Reports.zip?rlkey=mnj0hoyx45s314de9d3s8y7gw&st=hcdt3xhm&dl=1",
-  // },
-  // {
-  //     name: "Truster",
-  //     image: DVD3,
-  //     school: "damn vulnerable defi",
-  //     description:
-  //         "More and more lending pools are offering flashloans. In this case, a new pool has launched that is offering flashloans of DVT tokens for free. The pool holds 1 million DVT tokens. You have nothing. To pass this challenge, rescue all funds in the pool executing a single transaction. Deposit the funds into the designated recovery account.",
-  //     projectType: "blockchain",
-  //     programmingLanguage: ["solidity"],
-  //     gitHubLink: "https://github.com/eliab256/damn-vulnerable-defi-project.git",
-  //     presentationDownloadLink:
-  //         "https://www.dropbox.com/scl/fi/nuwa6tl9a8a8uapq8a6sjay/Truster-Reports.tar.gz?rlkey=6yxhvg7d5w81h85mgtrxr9him&st=wek0yjxa&dl=1",
-  // },
-  // {
-  //     name: "Side-Entrance",
-  //     image: DVD4,
-  //     school: "damn vulnerable defi",
-  //     description:
-  //         "A surprisingly simple pool allows anyone to deposit ETH, and withdraw it at any point in time. It has 1000 ETH in balance already, and is offering free flashloans using the deposited ETH to promote their system. You start with 1 ETH in balance. Pass the challenge by rescuing all ETH from the pool and depositing it in the designated recovery account.",
-  //     projectType: "blockchain",
-  //     programmingLanguage: ["solidity"],
-  //     gitHubLink: "https://github.com/eliab256/damn-vulnerable-defi-project.git",
-  //     presentationDownloadLink:
-  //         "https://www.dropbox.com/scl/fi/23301zmix8ofz70arjj97/Side-Entrance-Reports.zip?rlkey=9h611e7pf7cctbd9rb02n2nas&st=70p3c8dh&dl=1",
-  // },
+  {
+    name: "Yoyo NFT Auction Marketplace",
+    image: S2IFinalProject,
+    school: "start2impact",
+    description:
+      "The YoYo project aims to create a decentralized platform that makes access to yoga classes and exclusive content simple and innovative through the use of NFTs. Users can purchase tokens that represent the company’s services via smart contracts deployed on a blockchain. At the core of the platform is an ERC-721 smart contract written in Solidity that manages the NFT collection. Sales are handled through fully on-chain English and Dutch auction mechanisms, which are initialized by YoYo administrators. Users can participate by submitting bids in Ether directly to the contract. All these features are designed to be secure and standardized, leveraging OpenZeppelin libraries, and are validated through tests written in Foundry. Interaction with the smart contracts takes place through a dApp developed with React and TypeScript and deployed on Vercel, allowing users to connect their wallet, browse available NFTs and active auctions, purchase tokens, and manage the assets they already own.",
+    projectType: ["fullstack", "blockchain"],
+    programmingLanguage: ["solidity", "typescript", "react"],
+    gitHubLink: "https://github.com/eliab256/Yoyo-Web3Dapp.git",
+    etherscanLink: [
+      "https://sepolia.etherscan.io/address/0xFC188F25EE67D68BC61C74714DAA431d0719D1fe",
+      "https://sepolia.etherscan.io/address/0xbf993f5eE3b657Ce8Def22D14fE2733C9e37Bbd5",
+    ],
+    websiteLink: "https://yoyo-nft-auction.vercel.app/",
+    presentationDownloadLink:
+      "https://www.dropbox.com/scl/fi/kgf563iweba3nu7qp07xa/Yoyo-Web3-Dapp-Elia-Bordoni-Final-Project-S2I.pdf?rlkey=17kss5jkeh500pmnl1r17o7j8&st=xjbmoe7c&dl=1",
+  },
 ];
 
 export default projectCardData;

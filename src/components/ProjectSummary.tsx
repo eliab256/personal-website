@@ -41,22 +41,22 @@ const ProjectSummary: React.FC<ProjectSummaryProps> = ({ selectedProjectProp }) 
           <XMarkIcon className="w-6 h-6 text-white" />
         </div>
         {/* Title */}
-        <div className="flex flex-col items-center w-full mb-4">
+        <div className="flex flex-col items-center w-full mb-2">
           <h2 className="text-xl md:text-2xl lg:text-4xl font-bold text-center text-black">{name}</h2>
         </div>
 
         {/* Image */}
-        <div className="flex flex-col items-center w-full pt-0 md:pt-6">
-          <img src={image} alt={name} className="w-full max-w-[180px] md:max-w-[220px] lg:max-w-[220px] h-auto object-cover rounded-md" />
+        <div className="flex flex-col items-center w-full pt-0 md:pt-2">
+          <img src={image} alt={name} className="w-full max-w-[130px] md:max-w-[160px] lg:max-w-[160px] h-auto object-cover rounded-md" />
         </div>
 
         {/* Description */}
-        <div className="flex flex-col items-center w-full mb-2 px-4 md:px-6 lg:px-8 text-xs md:text-base lg:text-lg">
+        <div className="flex flex-col items-center w-full mb-1 px-4 md:px-6 lg:px-8 text-xs md:text-sm lg:text-sm">
           <p className="text-gray-600 text-justify">{description}</p>
         </div>
 
         {/* Programming Language */}
-        <div className="flex flex-wrap gap-2 justify-center my-4">
+        <div className="flex flex-wrap gap-2 justify-center my-2">
           {programmingLanguage.map((lang, index) => (
             <div className="px-3 py-1 bg-logo-blue text-white rounded-full text-sm" key={index}>
               {lang}
@@ -64,52 +64,55 @@ const ProjectSummary: React.FC<ProjectSummaryProps> = ({ selectedProjectProp }) 
           ))}
         </div>
 
-        {/* GitHub Link */}
-        <div className="my-2">
-          <a className="text-logo-blue hover:underline font-medium" target="_blank" rel="noopener" href={gitHubLink}>
-            GitHub repository link
-          </a>
-        </div>
-
-        {/* Etherscan Link */}
-        {hasValidEtherscanLink && (
-          <div className="my-2">
-            <a
-              className="text-logo-blue hover:underline font-medium"
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                if (Array.isArray(etherscanLink)) {
-                  etherscanLink.forEach((link) => {
-                    window.open(link, "_blank");
-                  });
-                } else {
-                  window.open(etherscanLink, "_blank", "noopener,noreferrer");
-                }
-              }}
-              rel="noopener"
-            >
-              {`Open ${Array.isArray(etherscanLink) ? etherscanLink.length : 1} link${
-                Array.isArray(etherscanLink) && etherscanLink.length > 1 ? "s" : ""
-              } on Etherscan`}
+        {/* Links Container */}
+        <div className="flex flex-col lg:flex-row lg:gap-4 lg:flex-wrap justify-center items-center">
+          {/* GitHub Link */}
+          <div className="my-1">
+            <a className="text-logo-blue hover:underline font-medium" target="_blank" rel="noopener" href={gitHubLink}>
+              GitHub repository link
             </a>
           </div>
-        )}
 
-        {/* Website Link */}
-        {hasValidWebsiteLink && (
-          <div className="my-2">
-            <a className="text-logo-blue hover:underline font-medium" target="_blank" rel="noopener" href={websiteLink}>
-              Website link
+          {/* Etherscan Link */}
+          {hasValidEtherscanLink && (
+            <div className="my-1">
+              <a
+                className="text-logo-blue hover:underline font-medium"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (Array.isArray(etherscanLink)) {
+                    etherscanLink.forEach((link) => {
+                      window.open(link, "_blank");
+                    });
+                  } else {
+                    window.open(etherscanLink, "_blank", "noopener,noreferrer");
+                  }
+                }}
+                rel="noopener"
+              >
+                {`Open ${Array.isArray(etherscanLink) ? etherscanLink.length : 1} link${
+                  Array.isArray(etherscanLink) && etherscanLink.length > 1 ? "s" : ""
+                } on Etherscan`}
+              </a>
+            </div>
+          )}
+
+          {/* Website Link */}
+          {hasValidWebsiteLink && (
+            <div className="my-1">
+              <a className="text-logo-blue hover:underline font-medium" target="_blank" rel="noopener" href={websiteLink}>
+                Website link
+              </a>
+            </div>
+          )}
+
+          {/* Presentation Link */}
+          <div className="my-1">
+            <a className="text-logo-blue hover:underline font-medium" target="_blank" rel="noopener" href={presentationDownloadLink}>
+              Presentation PDF download
             </a>
           </div>
-        )}
-
-        {/* Presentation Link */}
-        <div className="my-2">
-          <a className="text-logo-blue hover:underline font-medium" target="_blank" rel="noopener" href={presentationDownloadLink}>
-            Presentation PDF download
-          </a>
         </div>
       </div>
     </>

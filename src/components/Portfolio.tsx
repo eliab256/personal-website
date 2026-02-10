@@ -40,7 +40,7 @@ const Portfolio: React.FC = () => {
                 <h2 className="text-center">{school}</h2>
               </div>
               <div className="w-full flex flex-row flex-wrap justify-center pt-0.5 pb-0.5 px-2">
-                {projectsForSchool.map((project) => (
+                {projectsForSchool.reverse().map((project) => (
                   <ProjectCard key={project.name} projectProp={project} />
                 ))}
               </div>
