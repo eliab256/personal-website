@@ -4,8 +4,11 @@ export const projectTypes: ProjectType[] = ["frontEnd", "blockchain", "fullstack
 export type SchoolType = "start2impact" | "cyfrin Updraft" | "selfmade" | "damn vulnerable defi";
 export const schools: SchoolType[] = ["start2impact", "cyfrin Updraft", "selfmade", "damn vulnerable defi"];
 
-export type ProgrammingLanguagesType = "solidity" | "assembly" | "typescript" | "HTML and CSS" | "javascript" | "react" | "cairo";
-export const programmingLanguages: ProgrammingLanguagesType[] = ["solidity", "assembly", "typescript", "HTML and CSS", "javascript", "react", "cairo"];
+export type ProgrammingLanguagesType = "solidity" | "assembly" | "typescript" | "HTML and CSS" | "javascript" | "cairo";
+export const programmingLanguages: ProgrammingLanguagesType[] = ["solidity", "assembly", "typescript", "HTML and CSS", "javascript", "cairo"];
+
+export type TechnologyStackType = "remix" | "hardhat" | "foundry" | "brownie" | "chainlink" | "nextjs" | "wagmi" | "react" | "tailwindcss";
+export const technologicalStacks: TechnologyStackType[] = ["remix", "hardhat", "foundry", "brownie", "chainlink", "nextjs", "wagmi", "react", "tailwindcss"];
 
 export interface ProjectCardData {
   name: string;
@@ -14,6 +17,7 @@ export interface ProjectCardData {
   description: string;
   projectType: ProjectType | ProjectType[];
   programmingLanguage: ProgrammingLanguagesType[];
+  technologyStack: TechnologyStackType | TechnologyStackType[];
   gitHubLink: string;
   etherscanLink?: string | string[];
   websiteLink?: string;
@@ -26,9 +30,6 @@ export const platforms: PlatformType[] = ["damn vulnerable defi", "code4rena", "
 export type ProjectClass = "DeFi" | "NFT" | "DAO" | "Bridge" | "RWA";
 export const projectClasses: ProjectClass[] = ["DeFi", "NFT", "DAO", "Bridge", "RWA"];
 
-export type DevelopmentFrameworkType = "hardhat" | "foundry" | "brownie";
-export const developmentFrameworks: DevelopmentFrameworkType[] = ["hardhat", "foundry", "brownie"];
-
 export interface AuditCardData {
   name: string;
   image: string;
@@ -36,7 +37,7 @@ export interface AuditCardData {
   description: string;
   projectClass: ProjectClass;
   programmingLanguage: ProgrammingLanguagesType[];
-  developmentFramework: DevelopmentFrameworkType;
+  technologyStack: TechnologyStackType | TechnologyStackType[];
   findingsCount?: [number, number, number]; //high , medium , low
   gitHubLink: string;
   presentationDownloadLink: string;

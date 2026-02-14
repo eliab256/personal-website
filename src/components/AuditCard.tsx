@@ -8,7 +8,7 @@ export interface AuditCardProps {
 
 const AuditCard: React.FC<AuditCardProps> = ({ auditProp }) => {
   const dispatch = useDispatch();
-  const { name, image, projectClass, programmingLanguage, developmentFramework, findingsCount } = auditProp;
+  const { name, image, projectClass, programmingLanguage, technologyStack, findingsCount } = auditProp;
 
   return (
     <div
@@ -29,7 +29,16 @@ const AuditCard: React.FC<AuditCardProps> = ({ auditProp }) => {
                 {lang}
               </span>
             ))}
-            <span className="px-2 py-1 bg-white/10 border border-white/30 rounded-full text-xs text-white/60 backdrop-blur-sm">{developmentFramework}</span>
+          </div>
+          <div className="flex flex-row gap-2 justify-center items-center flex-wrap">
+            {(Array.isArray(technologyStack) ? technologyStack : [technologyStack]).map((tech, index) => (
+              <span
+                key={index}
+                className="px-2 py-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/40 rounded text-xs text-blue-200 backdrop-blur-sm"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
           {findingsCount && (
             <div className="flex gap-2 mt-2">

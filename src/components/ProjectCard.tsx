@@ -8,7 +8,7 @@ export interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ projectProp }) => {
   const dispatch = useDispatch();
-  const { name, image, projectType, programmingLanguage } = projectProp;
+  const { name, image, projectType, programmingLanguage, technologyStack } = projectProp;
 
   return (
     <div
@@ -33,6 +33,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projectProp }) => {
             {programmingLanguage.map((lang, index) => (
               <span key={index} className="px-3 py-1 bg-white/10 border border-white/30 rounded-full text-xs md:text-sm text-white backdrop-blur-sm">
                 {lang}
+              </span>
+            ))}
+          </div>
+          <div className="flex flex-row gap-2 justify-center items-center flex-wrap py-2">
+            {(Array.isArray(technologyStack) ? technologyStack : [technologyStack]).map((tech, index) => (
+              <span
+                key={index}
+                className="px-2 py-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/40 rounded text-xs text-blue-200 backdrop-blur-sm"
+              >
+                {tech}
               </span>
             ))}
           </div>
