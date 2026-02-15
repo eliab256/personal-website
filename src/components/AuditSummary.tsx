@@ -19,10 +19,12 @@ const AuditSummary: React.FC<AuditSummaryProps> = ({ selectedAuditProp }) => {
     presentationDownloadLink,
     platform,
     projectClass,
-    developmentFramework,
+    technologyStack,
     findingsCount,
     platformLink,
   } = selectedAuditProp;
+
+  const formatStack = (stack: AuditCardData["technologyStack"]): string => (Array.isArray(stack) ? stack.join(", ") : stack);
 
   // Funzione helper per verificare se il link è valido
   const isValidLink = (link: string | undefined | null): boolean => {
@@ -70,7 +72,7 @@ const AuditSummary: React.FC<AuditSummaryProps> = ({ selectedAuditProp }) => {
             </div>
             <div className="flex flex-wrap justify-around items-center gap-2">
               <div className="text-gray-700 border border-orange-200 bg-orange-50/30 rounded-full px-2 md:px-3 py-1 shadow-sm text-center">
-                <span className="font-semibold">Framework:</span> {developmentFramework}
+                <span className="font-semibold">Framework:</span> {formatStack(technologyStack)}
               </div>
               <div className="text-gray-700 border border-green-200 bg-green-50/30 rounded-full px-2 md:px-3 py-1 shadow-sm text-center">
                 <span className="font-semibold">Languages:</span> {programmingLanguage.join(", ")}
