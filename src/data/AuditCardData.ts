@@ -11,6 +11,7 @@ import DVD4 from "../assets/img/DamnVulnerableDefiImgs/DVD4.png";
 
 import RaiseBoxFaucetImg from "../assets/img/CodeHawksImgs/RaiseBoxFaucet.png";
 import BriVaultImg from "../assets/img/CodeHawksImgs/BriVault.png";
+import ThunderLoanImg from "../assets/img/CodeHawksImgs/ThunderLoan.png";
 
 // Import PDF damn vul defi files
 import UnstoppablePDF from "../assets/PDF/DamnVulnerableDefi/UnstoppableReport.pdf";
@@ -19,8 +20,53 @@ import SideEntrancePDF from "../assets/PDF/DamnVulnerableDefi/SideEntranceReport
 // Import CodeHawks PDF files
 import RaiseBoxFaucetAuditPDF from "../assets/PDF/CodeHawks/RaiseBoxFaucetAudit.pdf";
 import BriVaultAuditPDF from "../assets/PDF/CodeHawks/BriVaultAudit.pdf";
+import ThunderLoanAuditPDF from "../assets/PDF/CodeHawks/ThunderLoanAudit.pdf";
 
 const auditCardData: AuditCardData[] = [
+  //first flight Cyfrin CodeHawks
+  {
+    name: "RaiseBox Faucet",
+    image: RaiseBoxFaucetImg,
+    platform: "Cyfrin CodeHawks",
+    description:
+      "RaiseBox Faucet is a token drip faucet that drips 1000 test tokens to users every 3 days. It also drips 0.005 sepolia eth to first time users. The faucet tokens will be useful for testing the testnet of a future protocol that would only allow interactions using this tokens.",
+    projectClass: "DeFi",
+    programmingLanguage: ["solidity"],
+    technologyStack: "foundry",
+    findingsCount: [3, 1, 0],
+    gitHubLink: "https://github.com/eliab256/codeHawks-2025-10-raisebox-faucet.git",
+    presentationDownloadLink: RaiseBoxFaucetAuditPDF,
+    platformLink: "https://codehawks.cyfrin.io/c/2025-10-raisebox-faucet",
+  },
+  {
+    name: "BriVault",
+    image: BriVaultImg,
+    platform: "Cyfrin CodeHawks",
+    description:
+      "This smart contract implements a tournament betting vault using the ERC4626 tokenized vault standard. It allows users to deposit an ERC20 asset to bet on a team, and at the end of the tournament, winners share the pool based on the value of their deposits.",
+    projectClass: "DeFi",
+    programmingLanguage: ["solidity"],
+    technologyStack: ["foundry"],
+    findingsCount: [2, 0, 0],
+    gitHubLink: "https://github.com/eliab256/code-hawks-2025-11-brivault.git",
+    presentationDownloadLink: BriVaultAuditPDF,
+    platformLink: "https://codehawks.cyfrin.io/c/2025-11-brivault",
+  },
+  {
+    name: "ThunderLoan",
+    image: ThunderLoanImg,
+    platform: "Cyfrin CodeHawks",
+    description:
+      "This protocol is a lending protocol inspired by Aave and allows users to take flash loans paying a small fee. On the other side,liquidity providers earn interest on their deposits.",
+    projectClass: "DeFi",
+    programmingLanguage: ["solidity"],
+    technologyStack: ["foundry"],
+    findingsCount: [3, 1, 0],
+    gitHubLink: "https://github.com/eliab256/codeHawks-2026-02-ai-thunder-loan.git",
+    presentationDownloadLink: ThunderLoanAuditPDF,
+    platformLink: "https://codehawks.cyfrin.io/c/thunder-loan-cm2g8aww80006fc86k1hbhcph",
+  },
+
   //Damn Vulnerable DeFi
   {
     name: "Unstoppable",
@@ -57,36 +103,6 @@ const auditCardData: AuditCardData[] = [
     technologyStack: ["foundry"],
     gitHubLink: "https://github.com/eliab256/damn-vulnerable-defi-project.git",
     presentationDownloadLink: SideEntrancePDF,
-  },
-
-  //first flight Cyfrin CodeHawks
-  {
-    name: "RaiseBox Faucet",
-    image: RaiseBoxFaucetImg,
-    platform: "Cyfrin CodeHawks",
-    description:
-      "RaiseBox Faucet is a token drip faucet that drips 1000 test tokens to users every 3 days. It also drips 0.005 sepolia eth to first time users. The faucet tokens will be useful for testing the testnet of a future protocol that would only allow interactions using this tokens.",
-    projectClass: "DeFi",
-    programmingLanguage: ["solidity"],
-    technologyStack: "foundry",
-    findingsCount: [3, 1, 0],
-    gitHubLink: "https://github.com/eliab256/codeHawks-2025-10-raisebox-faucet.git",
-    presentationDownloadLink: RaiseBoxFaucetAuditPDF,
-    platformLink: "https://codehawks.cyfrin.io/c/2025-10-raisebox-faucet",
-  },
-  {
-    name: "BriVault",
-    image: BriVaultImg,
-    platform: "Cyfrin CodeHawks",
-    description:
-      "This smart contract implements a tournament betting vault using the ERC4626 tokenized vault standard. It allows users to deposit an ERC20 asset to bet on a team, and at the end of the tournament, winners share the pool based on the value of their deposits.",
-    projectClass: "DeFi",
-    programmingLanguage: ["solidity"],
-    technologyStack: ["foundry"],
-    findingsCount: [2, 0, 0],
-    gitHubLink: "https://github.com/eliab256/code-hawks-2025-11-brivault.git",
-    presentationDownloadLink: BriVaultAuditPDF,
-    platformLink: "https://codehawks.cyfrin.io/c/2025-11-brivault",
   },
 ];
 
